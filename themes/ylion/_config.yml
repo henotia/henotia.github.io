@@ -76,7 +76,7 @@ stick: true
 ## social config
 ## social 기능 설정 {@social:[url:주소,title:태그의 title,icon:표시 아이콘],[]}
 social:
-- url: github.com/henotia
+- url: https://github.com/henotia
   title: Follow me~
   icon: fa-github
 
