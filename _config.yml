@@ -5,7 +5,7 @@
 # Site
 title: 개발 블로그
 subtitle: Blah Blah
-description: Dog Foot
+description: My shelter
 author: Henotia
 language: ko
 timezone: Asia/Seoul
@@ -80,3 +80,9 @@ deploy:
   type: git
   repo: https://github.com/henotia/henotia.github.io.git
   branch: master
+
+# hexo-admin authentification
+admin:
+  username: ktojong
+  password_hash: $2a$10$2ZcY/3L.eCBfNlAjyxIzMO7a2zljGfGSL/vO5eJG7pWheOb4VtkZe
+  secret: 6eaa9561b64fbd3a18a498c70d4c777e

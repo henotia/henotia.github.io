@@ -31,7 +31,7 @@
                 <% if(theme.high_song && theme.high_song.length && theme.high_song.length > 0){ %>
                 <a href="javascript:void(0)" class="high-song"><%- theme.high_song %></a>
                 <% } %>
-                <% if(theme.donate && theme.donate.text && theme.donate.img && theme.donate.img.length > 0){ %>
+                <% if(theme.donate.enable && theme.donate.text && theme.donate.img && theme.donate.img.length > 0){ %>
                 <a href="javascript:void(0)" class="donate fa"><%- theme.donate.text %></a>
                 <% } %>
             </div>
@@ -75,6 +75,8 @@
                 <li> <%= __('post_licence') %>: <%- theme.cc %></li>
                 <% } %>
             </ul>
+
+            <% if(theme.donate.enable) {%>
             <div id="donate-wrap">
                 <%var donateImgs = theme.donate.img%>
                 <%if(donateImgs.length&&donateImgs.length>0){%>
@@ -83,6 +85,7 @@
                 <%})%>
                 <%}%>
             </div>
+            <% } %>
         </div>
     </article>
     <div class="article-nav">

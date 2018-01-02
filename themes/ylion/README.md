@@ -1,66 +1,65 @@
 # hexo-theme-ylion
-:blush: 说不定是一个让你感到惊喜的hexo主题 :beers: :candy:
+:blush: 너를 놀라게할 hexo 일지도 몰라 :beers: :candy:
 
-[在线预览 Preview](http://blog.geekaholic.cn)
+[미리보기](http://blog.geekaholic.cn)
 
 ![hexo-theme-ylion](http://olpvawdcl.bkt.clouddn.com/hexo-theme-ylion.jpg)
 
 
 
 
-## Features | 特点
+## Features
 
-- [x] jQuery Free，原生Javascript实现
-- [x] 强大的CSS3动画
-- [x] 文章过时提醒功能
-- [x] 支持文章置顶
-- [x] 网站公告功能
-- [x] 增强的站内搜索
-- [x] 首页图片懒加载
-- [x] leancloud阅读人数统计与最受欢迎文章widget
-- [x] 更强大的自定义
-- [x] 主题本身无图片
-- [x] 响应式
-- [x] gitment集成
-- [x] 支持双语对照功能
-- [x] （我编不下去了，等待你去发现~）
+- [x] jQuery Free，Vanilla javascript로 작성
+- [x] 강력한 css3 애니메이션
+- [x] 블로그 글이 오래되었을 경우 알림
+- [x] 블로그 글 상단 고정 지원
+- [x] 사이트 공지 기능
+- [x] 강화된 사이트 내 검색
+- [x] 사이트 이미지 Lazyload 지원
+- [x] 인기있는 통계위젯인 leancloud 사용
+- [x] 더욱 강력해진 사용자 커스터마이징
+- [x] 전용 이미지가 존재하지 않는 테마
+- [x] 반응형 테마
+- [x] gitment 통합
+- [x] 다국어 지원
+- [x] （더 이상 요약을 못하겠어. 너가 찾아주길 바래~）
 
-## TODO | 计划
+## TODO
 
-- [x] [使用教程和开发Hexo主题教程](http://blog.geekaholic.cn/tags/%E4%B8%BB%E9%A2%98%E5%88%B6%E4%BD%9C/)
-- [ ] ~~更多的优化~~（说了和没说一样==）
-- [ ] ~~文章分类目录可展开~~
-- [ ] Javascript模块化
-- [ ] ~~多说的样式以拓展功能~~ (为多说默哀ing，已替换为[gitment](https://github.com/imsun/gitment))
-- [x] 数学公式支持 / updated: 2017/2/19，[说明&注意事项](http://blog.geekaholic.cn/2017/02/19/mathjax/)
-- [ ] 便捷翻译和双语对照功能的使用教程
-- [ ] 你们来决定...:monkey:
+- [x] [Hexo 튜토리얼 작성](http://blog.geekaholic.cn/tags/%E4%B8%BB%E9%A2%98%E5%88%B6%E4%BD%9C/)
+- [ ] ~~더 많은 최적화 작업~~（==）
+- [ ] ~~post 분류 확장 개발 가능~~
+- [ ] Javascript 모듈화
+- [ ] ~~댓글 기능을 만들려다~~ [gitment](https://github.com/imsun/gitment)로 대체
+- [x] 수학공식 지원 / updated: 2017/2/19，[설몇&주의사항](http://blog.geekaholic.cn/2017/02/19/mathjax/)
+- [ ] 더욱 편리해진 번역과 다국어 사용 기능 튜토리얼
+- [ ] 그리고 너가 만들어줘...:monkey:
 
 
-## Getting Started | 开始使用
+## Getting Started
 
 :warning:
-**如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录**
+**이전에 `Hexo 2.x`를 사용했다면 알 수없는 오류를 피하기 위해 데이터를 백업하거나 새로운 블로그 디렉토리를 만드세요**
 
+### Prerequisites
 
-### Prerequisites | 前提条件
+`Node.js` 환경, `Git` 환경과 `Hexo`, 만약 아직 `Hexo`를 설치하지 않았거나 이해하지 못한다면, 공식 튜토리얼을 참고하세요 [공식 튜토리얼](https://hexo.io/ko/docs/index.html)。
 
-`Node.js` 环境、`Git` 环境以及 `Hexo` ,如果你尚未安装或者不了解 `Hexo`，请参考 [官方教程](https://hexo.io/zh-cn/docs/index.html) 进行了解以及安装。
+### Dependencies
 
-### Dependencies | 依赖安装
-
-因为 **hexo-theme-ylion** 使用了 `ejs` 模版引擎 、 `Less` CSS预编译语言以及在官方插件的基础上
-进行功能的开发，依赖必不可少。
+**hexo-theme-ylion**은 `ejs`와 `Less`를 사용했습니다. 이는 공식 플러그인을 기반으로 한 기능 개발의 필수 요소입니다.**
 
 ``` bash
-    ## 注意ejs的版本问题(见issue #5)
+    ## ejs의 버전문제에 주의하십시오([issue](https://github.com/GeekaholicLin/hexo-theme-ylion/issues/5) #5)
     npm install hexo-renderer-ejs hexo-renderer-less hexo-generator-feed hexo-generator-sitemap hexo-deployer-git hexo-util ejs@^1.0.0 moment utils-merge --save
 ```
 
-### Download | 下载主题文件
+### Download
 
-有两种方式下载主题--下载 `*.zip` 文件和通过 `git` ，无论哪种方式请确认下载的文件目录和博客站点的theme子目录中的landscape
-目录同一个级别，如下：
+테마를 다운로드 하는 방법은 두가지가 있습니다.
+`*.zip` 파일을 다운로드하거나 `git`을 사용하십시오.
+어떤 방식이든 다운로드 한 파일의 디렉토리를 아래와 같이 블로그 사이트의 landscape 와 동등한 위치에 넣으십시오
 
 ``` bash
     .
@@ -68,20 +67,21 @@
     └── ylion
 ```
 
-### Configure | 配置
+### Configure
 
-接下来就是配置的问题了，分为主题配置和站点配置，主要是主题配置。
+설정 부분은 테마 설정과 웹사이트 설정으로 나누었습니다.
+주로 봐야할 부분은 테마 설정 입니다
 
-#### Theme Configure | 主题配置
+#### Theme Configure
 
-各个设置项均在以下的主题文件中以注释的形式进行说明：
+각 설정 항목은 주석 형식으로 설명되어 있습니다.
 
 ``` yaml
 
-# layout -- 布局相关
+# layout -- 배치 관련
 
 
-## menu -- 导航菜单显示{[@page:名字/*多语言支持*/,@url:地址,@icon:显示的图标],[...]}
+## menu -- 탐색메뉴 표시{[@page:이름/*다국어지원*/,@url:주소,@icon:표시아이콘],[...]}
 menu:
 - page: home
   url: /
@@ -90,44 +90,44 @@ menu:
   url: /atom.xml
   icon: fa-rss
 
-## favicon -- 网站图标位置{@favicon}
+## favicon -- 사이트 파비콘 위치{@favicon}
 favicon: /favicon.ico
 
-## rss --rss文件位置{@rss}
+## rss --rss파일 위치{@rss}
 rss: /atom.xml
 
-## widgets -- 6个左边小工具{@widgets:[notification,category,archive,popular,tagcloud,friends]}
+## widgets -- 사이트 왼측에 위치하는 위젯{@widgets:[notification,category,archive,popular,tagcloud,friends]}
 widgets:
-- notification ## 网站公告
-- category ## 文章分类
-- archive ## 文章归档
-- popular ## 热门文章
-- tagcloud ## 彩色标签云
-- friends ## 友链
+- notification ## 상단 공지
+- category ## 카테고리
+- archive ## 아카이브
+- popular ## 인기있는 문서
+- tagcloud ## 태그 목록
+- friends ## 이웃 링크
 
-## widgets settings --各个小工具的设置
-### notification config --网站公告设置。支持 html 和 纯文本
+## widgets settings --각 위젯에 대한 설정
+### notification config --사이트 상단 공지에 대한 설정. HTML과 plain text 지원
 notification: |-
 
-            <p>主题ylion v0.0.0版本即将上线，敬请期待~！
-            主题作者：<a href="https://github.com/GeekaholicLin"
+            <p>ylion 테마 v0.0.0버전 출시 예정，기다려주세요~！
+            테마 제작자：<a href="https://github.com/GeekaholicLin"
             title="fork me" target="_blank">Geekaholic</a></p>
 
-### categories-list config --文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
+### categories-list config --카테고리 설정{@cate_config:{@show_count:숫자 표시여부，@show_current: 현재 카테고리 하이라이트 여부}}
 cate_config:
  show_count: true
  show_current: true
 
 
 ### archives-list config
-### 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+### 아카이브 설정{@arch_config:/*참고 매개변수：https://hexo.io/ko/docs/helpers.html#list-archives*/}
 arch_config:
  type: 'monthly'
  show_count: true
  order: -1
 
 ### tagcloud config
-### 彩色标签云设置{@tagcloud_config:/*https://hexo.io/zh-cn/docs/helpers.html#tagcloud*/}
+### 태그 목록 설정{@tagcloud_config:/*https://hexo.io/ko/docs/helpers.html#tagcloud*/}
 tagcloud_config:
  min_font: 0.14
  max_font: 0.2
@@ -139,20 +139,21 @@ tagcloud_config:
  end_color: '#0A407C'
 
 ### friends' links settings
-### 友链设置:{@links:[,,,]}
+### 이웃 링크:{@links:[,,,]}
 links:
-- 主题作者: http://geekaholiclin.github.io
+- 테마 제작자: http://geekaholiclin.github.io
 
 
 
-# content -- 内容显示相关
+# content -- 내용 표시 관련
 
 ## show top posts or not
-## 是否开启置顶文章功能？若开启，请在文章的Front-matter中加入`top`字段，top值越大越靠前
+## 블로그 글 상단 고정 기능 사용여부
+## 사용할 경우 post의 front-matter에 `top`필드을 추가하세요. `top`가 클수록 상단에 위치합니다
 stick: true
 
 ## social config
-## 社交功能设置 {@social:[url:地址,title:a标签的title,icon:显示图标],[]}
+## social 기능 설정 {@social:[url:주소,title:태그의 title,icon:표시 아이콘],[]}
 social:
 - url: https://www.example1.com
   title: freecodecamp
@@ -163,49 +164,49 @@ social:
 
 
 ## custom content config
-## 自定义内容设置
+## 커스텀 컨텐츠 설정
 ### append copyright when copy the text
-### 添加版权保护 {@appendCopyright:{enable:是否开启,triggerCopyLength:触发的复制长度,appendText:追加信息}}
+### 저작권 보호 추가 {@appendCopyright:{enable:사용여부,triggerCopyLength:길이,appendText:추가 정보}}
 appendCopyright:
   enable: true
   triggerCopyLength: 200
-  appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © example'
+  appendText: '상업적인 사용은 저자에게 연락하여 권한을 얻어주시기 바랍니다. 비상업적 사용은 출처를 명확히 밝혀주시기 바랍니다 © example'
 
 ### uncategory posts meta text
-### 当无目录时的显示文字，默认为'null'
+### 디렉토리에 category가 추가되지 않으면 default로 'null'
 noCategoryText: 'null'
 
 ### outdated browser warning
-### 过低版本的浏览器提醒文字
-outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
+### 낮은 버전의 브라우저 사용시 경고 메세지
+outdated_browser_text: '귀하의 브라우저 버전이 너무 낮습니다. 더 나은 사용환경을 경험하시려면 브라우저 버전을 업데이트 하시거나 IE Edge, Chrome, Firefox, Safari 등과 같은 최신 브라우저를 사용하십시오'
 
 ### outdated post warning
-### 文章过期提醒功能 {@warning:{days:临界天数,text:提醒文字/*%d为过期总天数占位符*/}}
+### 블로그 글 만료 기능 {@warning:{days:만료 일자,text:알림문자/*%d: 기간만료 일자 표시자*/}}
 warning:
   days: 300 #default is 300 days
-  text: '本文于%d天之前发表，文中内容可能已经过时。如有疑问，请在评论区留言。'
+  text: '해당 문서는 %d일 전에 작성되었습니다. 내용이 최신과 달라 의심스러운 경우 댓글로 남겨주세요'
 
 ### index article excerpt
-### 首页文章简介的图片
-### 规则:Front-matter中的自定义'img'字段 > 文章内的图片(随机获取) > defaultImgs(随机获取)
+### 블로그 글에 사용되는 디폴트 이미지
+### 규칙 : Front-matter 'img'에 있는 이미지 -> 해당 블로그 글의 임의 이미지 -> 디폴트 이미지 순으로 적용
 defaultImgs:
   - http://XXXX.example.jpg
   - /img/default-1.jpg
-excerptLength: 400 ### 简介文字显示最大字数
+excerptLength: 400
 
 ### article meta
-### 文章信息(article meta)指首页和文章内页，与icon一起的信息
-### @whichCategory 指定显示哪个分类，默认为最后一个，可以指定，若指定的超过该文章的分类总长度， 显示最后一个
+### article meta는 첫 페이지에서 보여지는 블로그 글의 내부 페이지와 아이콘 정보입니다
+### @whichCategory 표시할 카테고리를 지정하십시오. 기본값은 마지막 카테고리 입니다. 만약 카테고리 갯수가 최대 길이를 초과한다면 마지막 한가지를 보여 줍니다
 whichCategory: 0
 
 ### post footer
-### 作者信息部分设置
-high_song: 'high起来 &#128541;'  ### 歌曲显示文字，若不需要该功能，则留空或移除
-author_img: http://example.com/author.jpg ### 作者头像地址
-author_profile_page: /about.html  ### 点击作者的名字跳转的地址，默认为博客首页
+### 저자 정보 부분 설정
+high_song: '신나게!! &#128541;'  ### 노래를 틀어주는 문자. 이 기능이 필요하지 않다면 비우거나 제거하세요
+author_img: http://example.com/author.jpg ### 저자 아바타 주소
+author_profile_page: /about.html  ### 저자의 이름을 클릭할 때 이동할 페이지
 donate:
-  text: '赠我一杯 &#128536;' ### 打赏功能显示文字，若不需要，则留空或移除
-  img: ### 打赏图片地址
+  text: '赠我一杯 &#128536;' ### 컨텐츠에 만족한 구독자가 donation을 해주는 기능을 나타내는 문자입니다. 필요하지 않다면 비우거나 제거하세요
+  img: ### donation 이미지주소
   - url: http://example.com/alipay.jpg
     alt: '支付宝付款'
   - url: http://example.com/wechat.png
@@ -213,21 +214,23 @@ donate:
 
 ### support html&text like notification's support in this theme,
 ### but please don't use <li> tag
-### 版权声明文字，支持html/text，但不要使用<li>标签
+### 저작권 고지 텍스트, html / 텍스트 지원, <li> 태그 사용 불가
 cc: |-
         <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-        知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+        크리에이티브 커먼즈 저작자 표시 - 비영리적인 용도로만 - 비공식 3.0 비공식 라이센스（CC BY-NC-ND 3.0）
         </a>
 
 ### highlight {@highlightStyle:[github,solarized-light]}
-highlightStyle: github ### 内置主题
-# third party service --第三方服务
+highlightStyle: github ### 내장테마
+# third party service
+# 역자: busuanzi와 leancloud는 중국에서 사용하는 통계 사이트입니다. 한국에서의 사용은 무리가 있을 수 있으므로 별도의 번역을 하지는 않겠습니다.
 ## busuanzi --不蒜子站点总人数统计 {@visits_count:{enable:是否开启,icon:图标,text:显示文字/*%d为占位符*/,method:统计方式}}
+
 visits_count:
-  enable:  true
+  enable: true
   icon: fa-bar-chart
-  text: '欢迎第%d位小伙伴~'
-  count_method: 'uv' ### uv 为多次点击算一次，pv为每篇文章算一次
+  text: '환영합니다 %d번째 방문자님'
+  count_method: 'uv' ### uv: 여러 게시글 확인도 하나의 count로 처리，pv: 게시글을 확인할 때 마다 방문자 수 증가
 
 ## leancloud --- leancloud 阅读量统计
 ## {@leancloud:{enable:是否开启,className:创建的class,app_id:,app_key:,region:默认为中国地区,limits:热门文章显示总数}}
@@ -239,12 +242,12 @@ leancloud:
   region:
   limits: 10 ### 若要关闭该功能，设置为0或者在配置文件上移除popular对应的widget
 
-## comments -- 评论框
+## comments -- 댓글
 ### disqus
 disqus_shortname:
 ### duoshuo
 duoshuo_shortname:
-### gitment
+### [gitment](https://github.com/imsun/gitment)
 gitment:
   enable: true
   owner: GeekaholicLin
@@ -255,22 +258,22 @@ gitment:
   perPage: 20
   maxCommentHeight:
 
-## analytics --统计功能
-baidu_anaylytics:
-google_anaylytics:
+## analytics
+baidu_analytics:
+google_analytics:
 
-## sitemap -- 站点验证
+## sitemap
 google_vertification:
 baidu_vertification:
 
-## mathjax -- mathjax支持
+## mathjax -- mathjax지원
 mathjax:
-  enable: true  ### 是否开启，若开启，请再在Front-matter中加入`mathjax:true`
+  enable: true  ### mathjax를 지원한다면 front-matter에서도 mathjax:true를 입력하세요
   src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML ### cdn
 
-# cdn or local files --开启对应文件的cdn，默认使用本地文件。国内用户建议开启而不是使用github上的文件
-## style cdn --样式 cdn
-## icon -- 官网地址：http://fontawesome.io/icons/
+# cdn or local files -- cdn을 통해 관련 라이브러리를 사용합니다. github에 내장된 파일을 사용하는 대신 cdn을 사용하는 것이 좋습니다.
+## style cdn 
+## icon -- 공식 홈페이지 주소: http://fontawesome.io/icons/
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 
@@ -281,38 +284,34 @@ leancloud_src: http://cdn1.lncld.net/static/js/2.1.0/av-min.js
 busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 
 # theme and site self settings
-since: 2015 ## 网站建立时间
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 0.0.2 ### 主题版本
+since: 2015 ## 사이트 제작 시점
+robot: 'all' ### 검색 엔진 크롤링 및 색인 생성 동작을 제어하려면 기본값은 all로 두세요. 'meta name = "robots"`또는 검색을 참조하십시오. https://support.google.com/webmasters/answer/79812?hl=ko
+version: 0.0.2 ### 테마 버전
 
 
 ```
 
 
-如果你对主题的配置文件格式有疑问或者不熟悉语法，参考 [阮一峰老师的博客](http://www.ruanyifeng.com/blog/2016/07/yaml.html) 或者提出issue
+#### Site Configure
 
-
-
-#### Site Configure | 站点配置
-
-站点一般都保持默认，这里只讲主题相关的配置。
+사이트는 일반적으로 기본 설정으로 유지되며 테마 관련 구성에 대해서만 설명합니다.
 
 ``` yaml
 # Pagination
 ## Set per_page to 0 to disable pagination
-## @per_page为了首页加载速度，请设置合理的数值
+## @per_page 첫 페이지 로딩속도를 위하여, 적절한 수치를 입력하세요
 per_page: 10
 pagination_dir: page
 
-theme: ylion ### 主题文件在Theme目录下的命名
+theme: ylion ### theme 디렉토리의 테마 파일 이름
 
-### search插件基于 https://github.com/PaicHyperionDev/hexo-generator-search
-### 使用说明请参考该repo
+### search플러그인 https://github.com/PaicHyperionDev/hexo-generator-search
+### 사용설명은 해당 repository를 참고하세요
 search:
   path: search.xml
   field: all
 
-### 代码高亮
+### 코드 하이라이트
 highlight:
   enable: true
   line_number: true
@@ -322,93 +321,57 @@ highlight:
 
 
 
-### Run | 运行预览
+### Run
 
 ``` bash
     hexo clean && hexo g && hexo s -p 4300
 ```
 
-监听4300端口，使用浏览器打开地址`http://localhost:4300`进行预览。
+hexo dev server는 4300포트를 사용합니다. 브라우저에서 `http://localhost:4300`를 열어 미리보기를 하실 수 있습니다
 
 **Tips:**
 
-如果你为了更好地写博客，推荐两个Hexo插件：`hexo-browsersync` 和 `hexo-admin`。
+더 나은 블로그를 원한다면 `hexo-browsersync`와 `hexo-admin` 플러그인을 추천합니다
 
 ``` bash
     npm install hexo-browsersync --save
     npm install hexo-admin --save
 ```
 
-`hexo-browsersync` 主要用于监听刷新，`hexo-admin` 提供类似后台的功能。
+`hexo-browsersync`는 모니터링을 하는데 사용합니다
+`hexo-admin`은 Backend와 유사한 기능을 제공합니다
 
-前者无需配置，按照平常启用server预览即可。`hexo-admin` 的使用参考[官方Repo](https://github.com/jaredly/hexo-admin)
+`hexo-browsersync`는 환경설정이 필요하지 않으며, 사용하는 server에 따라 미리보기가 바로 가능합니다.
+`hexo-admin`의 사용은 공식 [Repository](https://github.com/jaredly/hexo-admin)를 참고하세요
 
-最后，Enjoy it!!!:kissing_heart:
+마지막으로，Enjoy it!!!:kissing_heart:
 
 
-## Languages | 支持的语言
+## Languages
 
-支持英语，简体中文和繁体中文。能力有限，欢迎翻译其他语言。
+영어, 중국어 간체자와 번체자를 지원합니다.
+다른 언어로의 번역을 환영합니다
+한국어를 추가적으로 지원합니다.
 
-## Compatibility | 兼容性
+## Compatibility
 
 IE9+*、Chrome、Firefox、Safari
 
-**说明：** IE9 支持基本功能，无动画效果以及 [leancloud无法正常使用统计功能](https://github.com/leancloud/javascript-sdk/issues/9)
+**설명:** IE9는 애니메이션을 제외한 기본기능만을 지원합니다 [leancloud는 통계기능을 정상적으로 사용할 수 없습니다](https://github.com/leancloud/javascript-sdk/issues/9)
 
-## Contribute | 贡献
+## Contribute
 
-主题的测试基本通过，个人使用基本没有问题，但难免会有纰漏。如果大家在使用的过程发现bug或者有改进性的建议，欢迎提出~
+테마의 기본적인 테스트는 통과를 했습니다. 개인적인 사용은 문제가 없습니다. 하지만 결함이 있을 수 있습니다.
+사용 도중 버그 또는 개선사항이 있다면 언제든지 건의해 주십시오.
 
-接受各种形式的贡献，包括不限于提交问题与需求，修复代码。期待Fork和PR~
+다양한 방식의 기여를 환영합니다. 건의사항이나 질문에 제한을 두지 않습니다.
+코드를 수정하게 되는 경우, Fork와 PR을 기대합니다
 
-如果喜欢该款主题，还希望不吝啬你的star~:satisfied:
+테마가 마음에 든다면, star를 꼭 바라는건 아니지만.. :satisfied:
 
-## Thanks | 感谢
+## Thanks
 
-作为一个设计天分上辈子都用光了的小前端，在设计这款主题的时候参考了好多主题和博客的设计和创意，
-才能在这么短的时间内成型一个博客主题，真的特别感谢！比心 :heart:
-
-**排名不分前后：**
-
-- [阿城的blog](https://qiutc.me/) / 借鉴了代码框
-- [小胡子哥的个人网站](http://www.barretlee.com/) / 借鉴文章过期提醒和作者信息
-- [hexo-theme-tranquilpeak](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak) / 借鉴文章简介的布局
-- [hexo-theme-next](https://github.com/iissnan/hexo-theme-next) / 从配置文件得知Hexo博客受欢迎的功能
-- [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) / 师傅带入门，初期代码参考
-- [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search) / 基于插件修改，解决站内搜索
-- [Netcan_Space](http://www.netcan666.com/) / 参考置顶功能排序算法
-
-## Changes log | 重要更新
-
-### V0.6.x
-
-- 增加便捷的翻译以及增加双语对照
-
-### V0.5.x
-
-- 增加主题的404页面(请手动将主题文件夹下的`404.md`拷贝至博客的source根目录)
-- 修复手机屏幕下搜索弹出框的宽度异常
-
-### V0.4.x
-
-- 增加窄屏幕下的显示widgets支持
-- 修复文章的底部信息样式错乱问题
-
-### V0.3.x
-
-- 移除多说的支持，替换为gitment，~~目前**尚未解决兼容性**~~，可以自行切换为Disqus(2017/7/23 V0.3.3 修复)
-- 移除大部分的圆角样式
-- 版本号更换 =。=
-
-### V0.2.0
-
-- 添加个人作品和About页面的支持
-
-
-### V0.1.0
-
-- 提交至官方theme仓库，ylion主题正式上线
+중국어 번역지원 : ku.taeyeon
 
 ## License
 

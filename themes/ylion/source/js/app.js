@@ -248,6 +248,10 @@ window.onload = function () {
               imgObj.onload = function () {
                 $this.innerHTML = "";
               };
+              var imageSrc = $this.getAttribute("data-src");
+              if (imageSrc === '/img/default.jpg') {
+                $this.style.backgroundSize = '100% 100%';
+              }
               imgObj.src = $this.getAttribute("data-src");
               $this.style.backgroundImage = "url(" +
                 $this.getAttribute("data-src") + ")";
@@ -285,15 +289,15 @@ window.onload = function () {
       imgsAjax($ajaxImgs);
     }
   };
-  // scrollCallback();
+  scrollCallback();
 
   window.addEventListener("scroll", function () {
     scrollCallback();
 
-    // clearTimeout(scrollTimer);
-    // scrollTimer = setTimeout(function () {
-    //   scrollCallback();
-    // }, 100);
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function () {
+      scrollCallback();
+    }, 100);
   });
 
   /*hash click*/

@@ -1,56 +1,56 @@
-# layout -- 布局相关
+# layout
 
-
-## menu -- 导航菜单显示{[@page:名字/*多语言支持*/,@url:地址,@icon:显示的图标],[...]}
+## menu --  탐색메뉴 표시{[@page:이름/*다국어지원*/,@url:주소,@icon:표시아이콘],
 menu:
 - page: home
   url: /
   icon: fa-home
+- page: about
+  url: /about
+  icon: fa-user
 - page: rss
   url: /atom.xml
   icon: fa-rss
 
-## favicon -- 网站图标位置{@favicon}
+## favicon -- 사이트 파비콘 위치{@favicon}
 favicon: /favicon.ico
 
-## rss --rss文件位置{@rss}
+## rss -- rss파일 위치{@rss}
 rss: /atom.xml
 
-## widgets -- 6个左边小工具{@widgets:[notification,category,archive,popular,tagcloud,friends]}
+## widgets -- 사이트 왼측에 위치하는 위젯{@widgets:[notification,category,archive,popular,tagcloud,friends]}
+## 역자: popular의 경우 leancloud기능이 꺼져있으면 사용이 불가능 합니다
 widgets:
 - notification
 - category
 - archive
-- popular
 - tagcloud
 - friends
 
-## widgets settings --各个小工具的设置
-### notification config --网站公告设置。支持 html 和 纯文本
+## widgets settings
+### notification config -- 사이트 상단 공지에 대한 설정. HTML과 plain text 지원
 notification: |-
-
-            <p>ylion v1.0.0 한글판~！<br>
-            원저작자：<a href="https://github.com/GeekaholicLin" title="fork me" target="_blank">Geekaholic</a><br>
-            수정배포：<a href="https://github.com/henotia" title="fork me" target="_blank">Henotia</a><br>
+            <p>블로그 공지<br>
+            ylion 한국어 지원：<a href="https://github.com/henotia" title="github" target="_blank">Henotia</a>
             </p>
 
-### categories-list config --文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
+### categories-list config -- 카테고리 설정{@cate_config:{@show_count:숫자 표시여부，@show_current: 현재 카테고리 하이라이트 여부}}
 cate_config:
  show_count: true
  show_current: true
 
 ### archives-list config
-### 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+### 아카이브 설정{@arch_config:/*참고 매개변수：https://hexo.io/ko/docs/helpers.html#list-archives*/}
 arch_config:
  type: 'monthly'
  show_count: true
  order: -1
 
 ### tagcloud config
-### 彩色标签云设置{@tagcloud_config:/*https://hexo.io/zh-cn/docs/helpers.html#tagcloud*/}
+### 태그 목록 설정{@tagcloud_config:/*https://hexo.io/ko/docs/helpers.html#tagcloud*/}
 tagcloud_config:
- min_font: 0.14
- max_font: 0.2
+ min_font: 0.15
+ max_font: 0.25
  unit: rem
  amount: 100
  color: true
@@ -59,146 +59,155 @@ tagcloud_config:
  end_color: '#0A407C'
 
 ### friends' links settings
-### 友链设置:{@links:[,,,]}
+### 이웃 링크:{@links:[,,,]}
 links:
-- 主题作者: http://geekaholiclin.github.io
+- 테마 제작자: http://geekaholiclin.github.io
+- 한국어 번역: http://henotia.github.io
 
 
-# content -- 内容显示相关
+
+# content
 
 ## show top posts or not
-## 是否开启置顶文章功能？若开启，请在文章的Front-matter中加入`top`字段，top值越大越靠前
+## 블로그 글 상단 고정 기능 사용여부
+## 사용할 경우 post의 front-matter에 `top`필드을 추가하세요. `top`가 클수록 상단에 위치합니다
 stick: true
 
 ## social config
-## 社交功能设置 {@social:[url:地址,title:a标签的title,icon:显示图标],[]}
+## social 기능 설정 {@social:[url:주소,title:태그의 title,icon:표시 아이콘],[]}
 social:
-- url: https://www.example1.com
-  title: freecodecamp
-  icon: fa-free-code-camp
-- url: https://www.example2.com
+- url: https://github.com/henotia
   title: Follow me~
   icon: fa-github
 
 
 ## custom content config
-## 自定义内容设置
+## 커스텀 컨텐츠 설정
 ### append copyright when copy the text
-### 添加版权保护 {@appendCopyright:{enable:是否开启,triggerCopyLength:触发的复制长度,appendText:追加信息}}
+### 저작권 보호 추가 {@appendCopyright:{enable:사용여부,triggerCopyLength:길이,appendText:추가 정보}}
 appendCopyright:
   enable: true
   triggerCopyLength: 200
-  appendText: '商业转载请联系作者获得授权,非商业转载请注明出处 © example'
+  appendText: '상업적인 사용은 저자에게 연락하여 권한을 얻어주시기 바랍니다. 비상업적 사용은 출처를 명확히 밝혀주시기 바랍니다 ©'
 
 ### uncategory posts meta text
-### 当无目录时的显示文字，默认为'null'
-noCategoryText: '분류없음'
+### 디렉토리에 category가 추가되지 않으면 default로 '기타'
+noCategoryText: '기타'
 
 ### outdated browser warning
-### 过低版本的浏览器提醒文字
-outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
+### ### 낮은 버전의 브라우저 사용시 경고 메세지
+outdated_browser_text: '귀하의 브라우저 버전이 너무 낮습니다. 더 나은 사용환경을 경험하시려면 브라우저 버전을 업데이트 하시거나 IE Edge, Chrome, Firefox, Safari 등과 같은 최신 브라우저를 사용하십시오'
 
 ### outdated post warning
-### 文章过期提醒功能 {@warning:{days:临界天数,text:提醒文字/*%d为过期总天数占位符*/}}
+### 블로그 글 만료 기능 {@warning:{days:만료 일자,text:알림문자/*%d: 기간만료 일자 표시자*/}}
 warning:
   days: 300 #default is 300 days
-  text: '本文于%d天之前发表，文中内容可能已经过时。如有疑问，请在评论区留言。'
+  text: '해당 문서는 %d일 전에 작성되었습니다. 내용이 최신과 달라 의심스러운 경우 댓글로 남겨주세요'
 
 ### index article excerpt
-### 首页文章简介的图片
-### 规则:Front-matter中的自定义'img'字段 > 文章内的图片(随机获取) > defaultImgs(随机获取)
+### 블로그 글에 사용되는 디폴트 이미지
+### 규칙 : Front-matter 'img'에 있는 이미지 -> 해당 블로그 글의 임의 이미지 -> 디폴트 이미지 순으로 적용
 defaultImgs:
-  - http://XXXX.example.jpg
-  - /img/default-1.jpg
+  - /img/default.jpg
 excerptLength: 400
 
 ### article meta
-### 文章信息(article meta)指首页和文章内页，与icon一起的信息
-### @whichCategory 指定显示哪个分类，默认为最后一个，可以指定，若指定的超过该文章的分类总长度， 显示最后一个
+### article meta는 첫 페이지에서 보여지는 블로그 글의 내부 페이지와 아이콘 정보입니다
+### @whichCategory 표시할 카테고리를 지정하십시오. 기본값은 마지막 카테고리 입니다. 만약 카테고리 갯수가 최대 길이를 초과한다면 마지막 한가지를 보여 줍니다
 whichCategory: 0
 
 ### post footer
-### 作者信息部分设置
-high_song: 'high起来 &#128541;'  ### 歌曲显示文字，若不需要该功能，则留空或移除
-author_img: http://example.com/author.jpg
-author_profile_page: /about.html
+### 저자 정보 부분 설정
+# high_song: '신나게!! &#128541;'  ### 노래를 틀어주는 문자. 이 기능이 필요하지 않다면 비우거나 제거하세요
+author_img: http://example.com/author.jpg # 저자 아바타 주소
+author_profile_page: /about.html  # 저자의 이름을 클릭할 때 이동할 페이지
+
 donate:
-  text: '赠我一杯 &#128536;' ### 打赏功能显示文字，若不需要，则留空或移除
-  img: ### 打赏图片地址
+  enable: false
+  text: '맥주한잔주기 &#128536;' ### 컨텐츠에 만족한 구독자가 donation을 해주는 기능을 나타내는 문자입니다. 필요하지 않다면 비우거나 제거하세요
+  img: ### donation 이미지주소
   - url: http://example.com/alipay.jpg
-    alt: '支付宝付款'
+    alt: 'alipay로 사주기'
   - url: http://example.com/wechat.png
-    alt: '微信付款'
+    alt: 'wechat으로 사주기'
 
 ### support html&text like notification's support in this theme,
 ### but please don't use <li> tag
-### 版权声明文字，支持html/text，但不要使用<li>标签
+### 저작권 고지 텍스트, html / 텍스트 지원, <li> 태그 사용 불가
 cc: |-
-        <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-        知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="크리에이티브 커먼즈 CC BY-NC-SA 4.0 라이센스">
+        <img src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" style="vertical-align:middle">
+        저작자표시-비영리-동일조건변경허락 (CC BY-NC-SA 4.0）
         </a>
+
 ### highlight
-### 内置两款代码主题
+### 내장된 두가지 코드테마 사용
 highlightStyle: github
-# third party service --第三方服务
+
+# third party service
+# 역자: busuanzi와 leancloud는 중국에서 사용하는 통계 사이트입니다.
+# 한국에서의 사용은 무리가 있을 수 있으므로 별도의 번역을 하지는 않겠습니다.
 ## busuanzi --不蒜子站点总人数统计 {@visits_count:{enable:是否开启,icon:图标,text:显示文字/*%d为占位符*/,method:统计方式}}
 visits_count:
-  enable: true
+  enable: false
   icon: fa-bar-chart
-  text: '欢迎第 %d 位小伙伴~'
-  count_method: 'uv' ### uv 为多次点击算一次，pv为每篇文章算一次
+  text: '환영합니다 %d번째 방문자님'
+  count_method: 'uv'
+  ### uv: 여러 게시글 확인도 하나의 count로 처리，pv: 게시글을 확인할 때 마다 방문자 수 증가
 
 ## leancloud --- leancloud 阅读量统计
 ## {@leancloud:{enable:是否开启,className:创建的class,app_id:,app_key:,region:默认为中国地区,limits:热门文章显示总数}}
 leancloud:
-  enable: false # leancloud는 중국쪽 서비스
+  enable: false
   className: "BlogCounter"
   app_id:
   app_key:
   region:
   limits: 10
 
-## comments -- 评论框
+## comments -- 댓글
 ### disqus
 disqus_shortname: henotia-github-io-1
 ### duoshuo
 duoshuo_shortname:
-### gitment
+### [gitment](https://github.com/imsun/gitment)
 gitment:
   enable: false
-  owner:
-  repo:
-  client_id:
-  client_secret:
+  owner: GeekaholicLin
+  repo: geekaholiclin.github.io
+  client_id: aa2215dfc8ee944d1205
+  client_secret: 77cd2afa5d161bc0ab04639ed81300d808c6e22b
   labels: "blog,gitment"
-  perPage: 10
+  perPage: 20
   maxCommentHeight:
 
-## analytics --统计功能
-baidu_anaylytics:
-google_anaylytics:
+## analytics
+baidu_analytics:
+google_analytics: 'UA-111716055-1'
 
-## sitemap -- 站点验证
+## sitemap
 google_vertification:
 baidu_vertification:
 
 ## mathjax
 mathjax:
-  enable: true
-  src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-# cdn or local files --开启对应文件的cdn，默认使用本地文件。国内用户建议开启而不是使用github上的文件
-## style cdn --样式 cdn
-## icon -- 官网地址：http://fontawesome.io/icons/
+  enable: true  # mathjax를 지원한다면 front-matter에서도 mathjax:true를 입력하세요
+  src: //cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML # cdn
+
+# cdn or local files -- cdn을 통해 관련 라이브러리를 사용합니다. github에 내장된 파일을 사용하는 대신 cdn을 사용하는 것이 좋습니다.
+## style cdn
+## icon -- 공식 홈페이지 주소: http://fontawesome.io/icons/
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 
-## script cdn --脚本cdn
+## script cdn
+## 불필요한 스크립트 로드 차단
 ## leancloud -- 官网:https://leancloud.cn/
-leancloud_src: http://cdn1.lncld.net/static/js/3.2.1/av-min.js
+# leancloud_src: http://cdn1.lncld.net/static/js/3.2.1/av-min.js
 ## busuanzi -- 官网：http://busuanzi.ibruce.info/
-busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
+# busuanzi_src: //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js
 
 # theme and site self settings
-since: 2017
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all，搜索 `meta name="robots"` 或请参考： https://support.google.com/webmasters/answer/79812?hl=zh-Hans
-version: 0.0.1
+since: 2018 # 사이트 제작 시점
+robot: 'all' # 검색 엔진 크롤링 및 색인 생성 동작을 제어하려면 기본값은 all로 두세요. 'meta name = "robots"`또는 검색을 참조하십시오. https://support.google.com/webmasters/answer/79812?hl=ko
+version: 0.0.2 # 테마 버전
