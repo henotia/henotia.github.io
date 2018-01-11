@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
+
+<meta name="description" content=My shelter/>
+
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1 | 개발 블로그</title>
+
+<link rel="alternate" href="/atom.xml" title="개발 블로그" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/pages/post.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+
+    <!--script-->
+
+
+
+<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
+
+
+    
+    
+<!-- old source
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+
+</script>
+-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111716055-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111716055-1');
+</script>
+
+
+</head>
+
+<body id="normal">
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">귀하의 브라우저 버전이 너무 낮습니다. 더 나은 사용환경을 경험하시려면 브라우저 버전을 업데이트 하시거나 IE Edge, Chrome, Firefox, Safari 등과 같은 최신 브라우저를 사용하십시오</div>
+<![endif]-->
+
+<div id="wrap">
+    <header  style="position: absolute;" >
+    <div id="site-meta">
+        <a href="/" id="logo">
+            <h1 class="title">개발 블로그</h1>
+        </a>
+        
+        <h2 class="subtitle">Blah Blah</h2>
+        
+    </div>
+    <ul id="nav">
+        
+            <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+        
+            <li><a href="/about"><i class="fa fa-user"></i>About</a></li>
+        
+            <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>검색</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        <p>블로그 공지<br>
+ylion 한국어 지원：<a href="https://github.com/henotia" title="github" target="_blank">Henotia</a>
+</p>
+    </div>
+</li>
+
+    
+    
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title">카테고리</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Ionic/"><i class="fa" aria-hidden="true">Ionic</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/계획/"><i class="fa" aria-hidden="true">계획</i></a><span class="category-list-count">1</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">Archives</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">1월 2018</i></a><span class="archive-list-count">2</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal tags">
+  <h3 class="fa fa-tags widget-title">태그</h3>
+  <div class="tagcloud-content">
+    
+      <a href="/tags/Ionic/" style="font-size: 0.15rem; color: #69c">Ionic</a> <a href="/tags/Cordova/" style="font-size: 0.15rem; color: #69c">Cordova</a> <a href="/tags/신년계획/" style="font-size: 0.15rem; color: #69c">신년계획</a>
+  </div>
+</li>
+
+
+    
+    
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title">링크</h3><br/>
+
+    
+        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">테마 제작자</a>
+
+    
+        <a href="http://henotia.github.io" class="fa" target="_blank">한국어 번역</a>
+
+    
+
+</li>
+
+    
+</ul>
+
+
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1">
+                
+                Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>Ionic</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            Ionic
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2018/01/11</span>
+    </span>
+    
+    
+    
+</div>
+
+            
+            
+        </div>
+        
+        <div id="post-body">
+            <p>참고</p>
+<ol>
+<li><a href="http://www.catharinegeek.com/embed-cordova-webview-in-android-native-app/" target="_blank" rel="noopener">http://www.catharinegeek.com/embed-cordova-webview-in-android-native-app/</a></li>
+<li><a href="https://github.com/Adobe-Marketing-Cloud-Apps/app-sample-android-phonegap/wiki/Embed-Webview-in-Android-Fragment" target="_blank" rel="noopener">https://github.com/Adobe-Marketing-Cloud-Apps/app-sample-android-phonegap/wiki/Embed-Webview-in-Android-Fragment</a></li>
+<li><a href="https://github.com/rajivnarayana/CordovaFragments" target="_blank" rel="noopener">https://github.com/rajivnarayana/CordovaFragments</a></li>
+<li><a href="https://github.com/shucc/CordovaFragment" target="_blank" rel="noopener">https://github.com/shucc/CordovaFragment</a></li>
+</ol>
+<p>본 post의 Ionic 프로젝트는 Ionic CLI 3.19.0과 cordova 7.x로 작성되었습니다.<br><img src="xnszr0aqc348to6r.png" alt="xnszr0aqc348to6r"></p>
+<hr>
+<blockquote>
+<p><strong>본 post에서는 Ionic 프로젝트를 Android Native 내에 삽입하기 위해 필요한 사전 준비 작업에 대해 설명합니다</strong></p>
+</blockquote>
+<h1 id="Ionic-Project-생성-및-빌드"><a href="#Ionic-Project-생성-및-빌드" class="headerlink" title="Ionic Project 생성 및 빌드"></a>Ionic Project 생성 및 빌드</h1><ol>
+<li>Ionic Project 생성<br><img src="2thqc88pbas2lnmi.png" alt="2thqc88pbas2lnmi"><br>ionic start를 통해 super 템플릿으로 프로젝트를 생성합니다.<br>super 템플릿에는 기본적인 페이지들과 Camera Plugin을 추가로 설치했을 때 Camera기능을 추가적인 코딩 없이 바로 사용할 수 있도록 작성되어 있습니다.<br><br><img src="8xsivp1el7jpp66r.png" alt="8xsivp1el7jpp66r"><br><strong>Ionic Pro SDK는 설치하지 않습니다.</strong><br><br></li>
+<li><p>Camera Plugin 설치</p>
+<blockquote>
+<p><code>ionic cordova plugin add cordova-plugin-camera</code></p>
+</blockquote>
+</li>
+<li><p>Android Platform 추가</p>
+<blockquote>
+<p><code>ionic cordova platform add android</code></p>
+</blockquote>
+</li>
+<li><p>Build</p>
+<blockquote>
+<p><code>ionic cordova build android</code></p>
+</blockquote>
+</li>
+</ol>
+<p>위의 과정을 모두 거치면 ionicEmbedded/platforms/android 내에 Android 프로젝트가 생성된다.</p>
+<h1 id="Android-Project-생성"><a href="#Android-Project-생성" class="headerlink" title="Android Project 생성"></a>Android Project 생성</h1><p><code>IonicEmbedded</code>라는 어플리케이션 명으로 Android Project를 만들어준다.<br>Ionic은 <a href="https://ionicframework.com/docs/intro/browser-support/" target="_blank" rel="noopener">Android 4.4 (API 19) 이상을 지원</a>하므로 SDK를 4.4 이상으로 맞춘 뒤, 프로젝트를 만들어주면 된다.<br>default Activity는 <code>Empty Activity</code>로 하고, Activity의 Name 역시 <code>MainActivity</code>로 한다.</p>
+<p><img src="90vijjlthbcyds4i.png" alt="90vijjlthbcyds4i"></p>
+<h1 id="Ionic-Project의-내용을-Android-Project에-복사"><a href="#Ionic-Project의-내용을-Android-Project에-복사" class="headerlink" title="Ionic Project의 내용을 Android Project에 복사"></a>Ionic Project의 내용을 Android Project에 복사</h1><p>Ionic Project에서 빌드로 나온 output을 Android Project에 복사해주면 된다</p>
+<h2 id="CordovaLib"><a href="#CordovaLib" class="headerlink" title="CordovaLib"></a>CordovaLib</h2><p><strong>Ionic Project를 Android Project로 옮기는데 가장 중요한 작업이다.</strong></p>
+<p>IonicProject/platforms/android/CordovaLib 내에 있는 코드를 jar 파일로 변환한 뒤, AndroidProject/app/libs 안에다 넣어주면 된다.<br>하지만 CordovaLib 내의 코드를 jar 파일로 변환시키기 위해선 아래와 같은 작업을 추가로 해주어야 한다.<br><strong>본 post에서는 6.4.0을 사용한다</strong></p>
+<p><em>생략하고 바로 받기</em>: <a href="CordovaLib-6.4.0.jar">CordovaLib-6.4.0.jar</a>, <a href="CordovaLib-7.0.0.jar">CordovaLib-7.0.0.jar</a></p>
+<h3 id="CordovaLib를-jar로-만들기"><a href="#CordovaLib를-jar로-만들기" class="headerlink" title="CordovaLib를 jar로 만들기"></a>CordovaLib를 jar로 만들기</h3><ol>
+<li>cordova-android source를 받는다. <a href="https://github.com/apache/cordova-android/releases/tag/6.4.0" target="_blank" rel="noopener">6.4.0</a> 또는 <a href="https://github.com/apache/cordova-android/releases/tag/7.0.0" target="_blank" rel="noopener">7.0.0</a><br>여기서는 6.4.0을 사용해 jar파일을 만든다</li>
+<li>내려받은 cordova-android source 내의 framework를 android studio에서 열어준다.<br>import project를 통해 cordova-android/framework를 직접 import 시키면 된다.<br><img src="zos88qd47r1thuxr.png" alt="zos88qd47r1thuxr"></li>
+<li>gradle build를 통해 framework를 빌드해준다<br><img src="805cnjngjba6pqfr.png" alt="805cnjngjba6pqfr"><br><strong>성공적으로 빌드가 된 경우 <code>framework/build/intermediates/intermediates-jars/release/classes.jar</code>가 생성된다</strong><br>만약 lint 도중 에러가 발생하는 경우 <code>build.gradle</code> 파일 내에 <code>android { }</code> 영역을 찾아 아래와 같이 작성해준다<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  ...</span><br><span class="line">android &#123;</span><br><span class="line">  lintOptions &#123;</span><br><span class="line">    abortOnError <span class="keyword">false</span></span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>생성된 파일을 <code>CordovaLib</code>로 이름을 바꾼 뒤 <code>AndroidProject/app/libs</code>에 넣어준다.<br>이후 <code>app/</code> 아래에 있는 build.gradle에 <code>implementation files(&#39;libs/CordovaLib.jar&#39;)</code>를 적어준다.<br><img src="89y69jipfkdibe29.png" alt="89y69jipfkdibe29"><br>성공적으로 연결이 된 경우, CordovaLib 내의 클래스들을 사용할 수 있게 된다.</p>
+<h2 id="Assets"><a href="#Assets" class="headerlink" title="Assets"></a>Assets</h2><p>IonicProject의 <code>platforms/android/assets/</code> 아래에 있는 <code>www/</code> 디렉토리를 AndroidProject에 통째로 복사한다.</p>
+<p><code>platforms/android/assets/www/</code> -&gt; <code>app/src/main/assets/www/</code><br><img src="s8v1uge5xgktke29.png" alt="s8v1uge5xgktke29"></p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><p><code>platforms/android/res/</code> 아래에 있는 파일들을 말한다.<br>splashscreen이나 app icon등 resource 파일들이 존재한다.<br><code>drawable-</code>로 시작하거나 <code>mipmap-</code>으로 시작하는경우 반드시 옮기지 않아도 된다.</p>
+<p>Resources에서 가장 중요하게 봐야될 부분은 <code>xml/config.xml</code>로, Cordova에서 사용하는 설정들이 모두 담겨있다.<br>따라서 <code>xml/</code>만큼은 반드시 AndroidProject로 복사해 주어야 한다.</p>
+<p>그 외의 plugin에서의 사용을 위해 임의로 만든 몇몇 파일들이 존재하는데, 예로 cordova-plugin-camera는 <code>xml/provider_paths.xml</code>파일이 존재한다.</p>
+<p>이 경우도 반드시 복사를 해주어야 한다</p>
+<p><code>platforms/android/res/</code> -&gt; <code>src/main/res/</code><br>몇몇 파일만을 특정하여 복사하는게 어려운경우, res 디렉토리를 통짜로 복사하면 된다.</p>
+<h2 id="Plugins-Source"><a href="#Plugins-Source" class="headerlink" title="Plugins Source"></a>Plugins Source</h2><p><code>platforms/android/src/</code>아래에 있는 <code>.java</code>파일들을 말한다.</p>
+<p>IonicProject 루트에 위치한 config.xml 파일 내의 <code>&lt;widget id=&quot;&quot;&gt;</code> 에 적혀있는 id가 Android App에서 사용하는 <code>MainActivity</code> 파일이 위치한 경로이다.<br>Ionic Super 템플릿은 <code>&lt;widget id=&quot;io.ionic.starter&quot; /&gt;</code>로 되어 있으며, <code>platform/android/src/io/ionic/starter/MainActivity.java</code>가 위치한다</p>
+<p>위의 파일을 제외한 나머지는 모두 Cordova에서 사용하는 Plugin이므로 모두 복사해주어야 한다.</p>
+<p><code>platforms/android/src/plugin_folders</code> -&gt; <code>src/main/java</code><br><img src="fwyuap4fg12d42t9.png" alt="fwyuap4fg12d42t9"></p>
+<h2 id="AndroidManifest"><a href="#AndroidManifest" class="headerlink" title="AndroidManifest"></a>AndroidManifest</h2><p><code>platforms/android/AndroidManifest.xml</code>은 Android 관련 설정이 담겨있다.<br>위의 파일을 토대로, AndroidProject의 <code>AndroidManifest.xml</code>파일을 수정해 주어야 한다.<br><img src="9ql8nuci6586ko6r.png" alt="9ql8nuci6586ko6r"><br>왼쪽이 Android Project이고 오른쪽이 Ionic Project이다.</p>
+<p>provider 부분은 Camera Plugin으로 인해 생긴 부분이다.<br>위의 Resource 섹션의 <code>provider_paths.xml</code>을 사용한다.</p>
+<hr>
+<p> 위의 작업을 끝으로 Ionic Project 내의 모든 설정을 Android Project로 옮겼다.<br> 다음장에는 Android Project에서 Ionic Project를 띄우기 위한 Native 작업에 대해 설명한다</p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://example.com/author.jpg" alt="avatar"/>
+                
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  글쓴이:
+                  
+                    
+                    <a href="/about.html">Henotia</a>
+                </li>
+                
+                <li>발행 일자: <span>2018-01-11  15:53:42</span></li>
+                
+                <li>업데이트 일자: <span>2018-01-11  16:31:37</span></li>
+                
+                <li class="post-category">
+                    카테고리:
+                    
+                    <a href="/categories/Ionic/">Ionic</a>
+                    
+                </li>
+                <li class="post-tags">
+                    태그:
+                    
+                    <a href="/tags/Ionic/">Ionic</a>
+                    
+                    <a href="/tags/Cordova/">Cordova</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="크리에이티브 커먼즈 CC BY-NC-SA 4.0 라이센스">
+<img src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" style="vertical-align:middle">
+저작자표시-비영리-동일조건변경허락 (CC BY-NC-SA 4.0）
+</a></li>
+                
+            </ul>
+
+            
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/신년계획/" class="next-post fa">신년계획</a>
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<div id="disqus_thread"></div>
+<script>
+    var shortName = 'henotia-github-io-1'
+
+    var disqus_config = function () {
+     this.page.url = 'http://henotia.github.io/IonicEmbedded_1/';  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = 'post'+'-IonicEmbedded_1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//'+shortName+'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<script id="dsq-count-scr" src="//henotia-github-io-1.disqus.com/count.js" async></script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+    <footer id="footer">
+    
+    <div class="social">
+        
+        <a href="https://github.com/henotia" class="fa fa-github" target="_blank" title="Follow me~"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/" class="copyright-links">Henotia</a>&copy;2018 - 2018.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+</footer>
+
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    <li class="exchange-btn fa fa-exchange"></li>
+  
+    <li class="toc-btn fa fa-list-ul"></li>
+    
+    
+
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ionic-Project-생성-및-빌드"><span class="toc-number">1.</span> <span class="toc-text"><a href="#Ionic-Project-&#xC0DD;&#xC131;-&#xBC0F;-&#xBE4C;&#xB4DC;" class="headerlink" title="Ionic Project &#xC0DD;&#xC131; &#xBC0F; &#xBE4C;&#xB4DC;"></a>Ionic Project &#xC0DD;&#xC131; &#xBC0F; &#xBE4C;&#xB4DC;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android-Project-생성"><span class="toc-number">2.</span> <span class="toc-text"><a href="#Android-Project-&#xC0DD;&#xC131;" class="headerlink" title="Android Project &#xC0DD;&#xC131;"></a>Android Project &#xC0DD;&#xC131;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ionic-Project의-내용을-Android-Project에-복사"><span class="toc-number">3.</span> <span class="toc-text"><a href="#Ionic-Project&#xC758;-&#xB0B4;&#xC6A9;&#xC744;-Android-Project&#xC5D0;-&#xBCF5;&#xC0AC;" class="headerlink" title="Ionic Project&#xC758; &#xB0B4;&#xC6A9;&#xC744; Android Project&#xC5D0; &#xBCF5;&#xC0AC;"></a>Ionic Project&#xC758; &#xB0B4;&#xC6A9;&#xC744; Android Project&#xC5D0; &#xBCF5;&#xC0AC;</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CordovaLib"><span class="toc-number">3.1.</span> <span class="toc-text"><a href="#CordovaLib" class="headerlink" title="CordovaLib"></a>CordovaLib</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CordovaLib를-jar로-만들기"><span class="toc-number">3.1.1.</span> <span class="toc-text"><a href="#CordovaLib&#xB97C;-jar&#xB85C;-&#xB9CC;&#xB4E4;&#xAE30;" class="headerlink" title="CordovaLib&#xB97C; jar&#xB85C; &#xB9CC;&#xB4E4;&#xAE30;"></a>CordovaLib&#xB97C; jar&#xB85C; &#xB9CC;&#xB4E4;&#xAE30;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Assets"><span class="toc-number">3.2.</span> <span class="toc-text"><a href="#Assets" class="headerlink" title="Assets"></a>Assets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resources"><span class="toc-number">3.3.</span> <span class="toc-text"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Plugins-Source"><span class="toc-number">3.4.</span> <span class="toc-text"><a href="#Plugins-Source" class="headerlink" title="Plugins Source"></a>Plugins Source</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AndroidManifest"><span class="toc-number">3.5.</span> <span class="toc-text"><a href="#AndroidManifest" class="headerlink" title="AndroidManifest"></a>AndroidManifest</span></a></li></ol></li></ol>
+
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '상업적인 사용은 저자에게 연락하여 권한을 얻어주시기 바랍니다. 비상업적 사용은 출처를 명확히 밝혀주시기 바랍니다 ©';
+    var leancloudObj = {};
+    leancloudObj.enable = 'false';
+    leancloudObj.className = 'BlogCounter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>
