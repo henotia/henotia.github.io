@@ -111,7 +111,7 @@ public class IonicActivity extends CordovaActivity {
       <activity android:name=".MainActivity">
         ...
       </activity>
-      <activity android:name=".IonicActivity />         <- 새로 추가
+      <activity android:name=".IonicActivity" />         <!-- 새로 추가 -->
     </application>
     ...
 ```
