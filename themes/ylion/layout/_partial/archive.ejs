@@ -2,7 +2,7 @@
     <div id="post-list">
         <ul class="archives-post-list">
             <% page.posts.each(function(post){ %>
-            <li class="post-items" _href="<%- url_for(post.path) %>">
+            <li class="post-items" _href="<%- url_for(post.path) %>" title="<%= post.title %>">
                 <%
                     var info = post.date;
                     if (is_category()) info = page.category;
