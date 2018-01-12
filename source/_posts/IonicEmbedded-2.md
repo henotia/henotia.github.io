@@ -102,7 +102,19 @@ public class IonicActivity extends CordovaActivity {
 }
 ```
 
-위의 코드를 작성했으면, IonicActivity가 사용할 layout을 작성해 준다.
+위의 코드를 작성했으면, IonicActivity를 AndroidManifest.xml에 등록한다.
+
+# AndroidManifest.xml
+``` xml
+    ...
+    <application ...>
+      <activity android:name=".MainActivity">
+        ...
+      </activity>
+      <activity android:name=".IonicActivity />         <- 새로 추가
+    </application>
+    ...
+```
 
 # cordova_layout 생성
 layout은 `res/layout`아래에 작성해주면 된다.
