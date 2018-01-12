@@ -156,10 +156,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override
   public void onClick(View v) {
     switch (v.getId()) {
-      case R.id.startIonicActivity: {
+      case R.id.startIonicActivity:
         Intent intent = new Intent(this, IonicActivity.class);
         startActivity(intent);
-      }
+
     }
   }
 }
