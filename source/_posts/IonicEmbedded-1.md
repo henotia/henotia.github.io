@@ -5,7 +5,7 @@ categories: [Ionic]
 tags: [Ionic, Cordova]
 date: 2018-01-11 15:53:42
 author: 헤노티아
-img: /IonicEmbedded_1/9ql8nuci6586ko6r.png
+img: /IonicEmbedded-1/9ql8nuci6586ko6r.png
 ---
 참고
 1. http://www.catharinegeek.com/embed-cordova-webview-in-android-native-app/
@@ -13,12 +13,18 @@ img: /IonicEmbedded_1/9ql8nuci6586ko6r.png
 3. https://github.com/rajivnarayana/CordovaFragments
 4. https://github.com/shucc/CordovaFragment
 
-본 post의 Ionic 프로젝트는 Ionic CLI 3.19.0과 cordova 7.x로 작성되었습니다.
-![xnszr0aqc348to6r](xnszr0aqc348to6r.png)
+> **함께보기**
+ [Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1](/IonicEmbedded-1)
+ [Ionic Project를 Android Native 내에 Embedded 시키는 방법 #2](/IonicEmbedded-2)
+ [Ionic Project를 Android Native 내에 Embedded 시키는 방법 #3](/IonicEmbedded-3)
 
----
+<br>
 
 > **본 post에서는 Ionic 프로젝트를 Android Native 내에 삽입하기 위해 필요한 사전 준비 작업에 대해 설명합니다**
+
+---
+본 post의 Ionic 프로젝트는 Ionic CLI 3.19.0과 cordova 7.x로 작성되었습니다.
+![xnszr0aqc348to6r](xnszr0aqc348to6r.png)
 
 # Ionic Project 생성 및 빌드
 1. Ionic Project 생성

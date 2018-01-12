@@ -5,11 +5,11 @@ categories: [Ionic]
 tags: [Ionic, Cordova]
 date: 2018-01-11 17:57:43
 author: 헤노티아
-img: /IonicEmbedded_1/9ql8nuci6586ko6r.png
+img: /IonicEmbedded-1/9ql8nuci6586ko6r.png
 ---
 
 > **본 post에서는 Ionic 프로젝트를 Android Activity를 통해 실행하는 방법에 대해 설명합니다**
-> **본 post의 내용은 [Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1](/IonicEmbedded_1)에서 이어집니다**
+> **본 post의 내용은 [Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1](/IonicEmbedded-1)에서 이어집니다**
 
 ---
 
