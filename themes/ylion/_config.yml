@@ -50,7 +50,7 @@ arch_config:
 ### 태그 목록 설정{@tagcloud_config:/*https://hexo.io/ko/docs/helpers.html#tagcloud*/}
 tagcloud_config:
  min_font: 0.15
- max_font: 0.25
+ max_font: 0.20
  unit: rem
  amount: 100
  color: true
