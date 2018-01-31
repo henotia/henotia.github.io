@@ -321,7 +321,7 @@
 #demo .demo-title .warning {
   font-weight: 200;
   font-size: 14px;
-  color: #BA5C5A;
+  color: #ba5c5a;
 }
 #demo .demo-list-item {
   position: relative;
@@ -383,7 +383,7 @@
   white-space: nowrap;
 }
 #about .line {
-  line-height: 2.8!important;
+  line-height: 2.8 !important;
 }
 #error-page {
   min-height: 100%;
@@ -439,7 +439,7 @@
 #error-page .terminal-run p {
   white-space: pre-wrap;
   word-break: break-all;
-  line-height: 1.3!important;
+  line-height: 1.3 !important;
 }
 #error-page .terminal-run > .train {
   display: inline-block;
@@ -457,4 +457,375 @@
 }
 #error-page .terminal-run .error-date {
   margin-right: 15px;
+}
+#post {
+  color: #444444;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#post #post-body .video-container,
+#about .video-container,
+#error-page #error .video-container {
+  text-align: center;
+  height: 380px;
+}
+#post #post-body .video-container iframe,
+#about .video-container iframe,
+#error-page #error .video-container iframe {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+}
+#post #post-body p,
+#about p,
+#error-page #error p {
+  line-height: 1.9;
+}
+#post #post-body p + p,
+#about p + p,
+#error-page #error p + p {
+  margin-top: 10px;
+}
+#post #post-body h1,
+#post #post-body h2,
+#post #post-body h3,
+#post #post-body h4,
+#post #post-body h5,
+#post #post-body h6,
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about h5,
+#about h6,
+#error-page #error h1,
+#error-page #error h2,
+#error-page #error h3,
+#error-page #error h4,
+#error-page #error h5,
+#error-page #error h6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0.1rem 0;
+  display: block;
+  border-bottom: 1px solid rgba(206, 206, 206, 0.18);
+}
+#post #post-body h1:after,
+#post #post-body h2:after,
+#post #post-body h3:after,
+#post #post-body h4:after,
+#post #post-body h5:after,
+#post #post-body h6:after,
+#about h1:after,
+#about h2:after,
+#about h3:after,
+#about h4:after,
+#about h5:after,
+#about h6:after,
+#error-page #error h1:after,
+#error-page #error h2:after,
+#error-page #error h3:after,
+#error-page #error h4:after,
+#error-page #error h5:after,
+#error-page #error h6:after {
+  content: "#";
+  float: right;
+}
+#post #post-body h1:hover,
+#post #post-body h2:hover,
+#post #post-body h3:hover,
+#post #post-body h4:hover,
+#post #post-body h5:hover,
+#post #post-body h6:hover,
+#about h1:hover,
+#about h2:hover,
+#about h3:hover,
+#about h4:hover,
+#about h5:hover,
+#about h6:hover,
+#error-page #error h1:hover,
+#error-page #error h2:hover,
+#error-page #error h3:hover,
+#error-page #error h4:hover,
+#error-page #error h5:hover,
+#error-page #error h6:hover {
+  color: #6699cc;
+}
+#post #post-body blockquote,
+#about blockquote,
+#error-page #error blockquote {
+  margin: 0.15rem 0;
+  border-left: 5px solid #cecece;
+  padding: 0.05rem 0.15rem 0.05rem 0.3rem;
+  background-color: #eaeaea;
+  color: #666666;
+}
+#post #post-body blockquote cite:before,
+#about blockquote cite:before,
+#error-page #error blockquote cite:before {
+  content: "---";
+  padding: .1rem;
+}
+#post #post-body strong,
+#about strong,
+#error-page #error strong {
+  color: #666666;
+}
+#post #post-body figure,
+#about figure,
+#error-page #error figure {
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Monaco, Menlo, monospace;
+  margin: 0.3rem 0;
+  border: 1px solid #cecece;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 0.14rem;
+}
+#post #post-body figure:before,
+#about figure:before,
+#error-page #error figure:before {
+  content: "";
+  display: block;
+  height: 0.4rem;
+  background-color: #e3e3e3;
+  border-top: 1px solid #cecece;
+}
+#post #post-body figure:after,
+#about figure:after,
+#error-page #error figure:after {
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #fc625d;
+  width: 0.12rem;
+  height: 0.12rem;
+  top: 0.15rem;
+  left: 0.17rem;
+  -webkit-box-shadow: 0.2rem 0 #fdbc40, 0.4rem 0 #35cd4b;
+  box-shadow: 0.2rem 0 #fdbc40, 0.4rem 0 #35cd4b;
+}
+#post #post-body figure table,
+#about figure table,
+#error-page #error figure table {
+  width: 100%;
+}
+#post #post-body figure figcaption,
+#about figure figcaption,
+#error-page #error figure figcaption {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+#post #post-body figure figcaption a,
+#about figure figcaption a,
+#error-page #error figure figcaption a {
+  position: absolute;
+  right: .17rem;
+}
+#post #post-body figure .gutter,
+#about figure .gutter,
+#error-page #error figure .gutter {
+  padding: 0 0.1rem;
+  width: 0.15rem;
+  border-right: 1px solid #e0e0e0;
+}
+#post #post-body figure .gutter > pre,
+#about figure .gutter > pre,
+#error-page #error figure .gutter > pre {
+  display: none;
+}
+#post #post-body figure .code,
+#about figure .code,
+#error-page #error figure .code {
+  padding: 0 .1rem;
+  vertical-align: top;
+  counter-reset: line-number;
+}
+#post #post-body figure .code .line,
+#about figure .code .line,
+#error-page #error figure .code .line {
+  position: relative;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+#post #post-body figure .code .line:before,
+#about figure .code .line:before,
+#error-page #error figure .code .line:before {
+  counter-increment: line-number;
+  content: counter(line-number);
+  color: #cecece;
+  position: absolute;
+  left: -0.38rem;
+}
+#post #post-body figure .code .line.marked,
+#about figure .code .line.marked,
+#error-page #error figure .code .line.marked {
+  background-color: #ABCDEF;
+}
+#post #post-body figure .line,
+#about figure .line,
+#error-page #error figure .line {
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Monaco, Menlo, monospace;
+}
+#post #post-body img,
+#about img,
+#error-page #error img {
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 5px solid #cecece;
+  margin: 0.3rem auto;
+  max-width: 95%;
+}
+#post #post-body .caption,
+#about .caption,
+#error-page #error .caption {
+  display: block;
+  text-align: center;
+  font-size: 0.14rem;
+  color: #666666;
+  margin: -0.2rem 0 0.2rem;
+}
+#post #post-body a,
+#about a,
+#error-page #error a {
+  padding: 0 0.05rem;
+  color: #6699cc !important;
+}
+#post #post-body sup,
+#post #post-body sub,
+#about sup,
+#about sub,
+#error-page #error sup,
+#error-page #error sub {
+  margin-right: .1rem;
+}
+#post #post-body ul,
+#post #post-body ol,
+#about ul,
+#about ol,
+#error-page #error ul,
+#error-page #error ol {
+  padding-left: 0.4rem;
+  margin: .1rem 0 .3rem 0;
+}
+#post #post-body ul li,
+#post #post-body ol li,
+#about ul li,
+#about ol li,
+#error-page #error ul li,
+#error-page #error ol li {
+  line-height: 1.9;
+}
+#post #post-body ul li,
+#about ul li,
+#error-page #error ul li {
+  list-style-type: disc;
+}
+#post #post-body ol li,
+#about ol li,
+#error-page #error ol li {
+  list-style-type: decimal;
+}
+#post #post-body hr,
+#about hr,
+#error-page #error hr {
+  display: block;
+  border: 1px dashed #cecece;
+  margin: 0.3rem 0;
+}
+#post #post-body li > code,
+#post #post-body p > code,
+#about li > code,
+#about p > code,
+#error-page #error li > code,
+#error-page #error p > code {
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Monaco, Menlo, monospace;
+  padding: 0.01rem 0.05rem;
+  margin: 0 0.05rem;
+  background-color: #ebebeb;
+  border: 1px solid #cecece;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#post #post-body > table,
+#about > table,
+#error-page #error > table {
+  border-collapse: collapse;
+  margin: .15rem auto;
+  width: 100% !important;
+  /* fix unknown render issue */
+  overflow: auto;
+}
+#post #post-body > table.scroll-table,
+#about > table.scroll-table,
+#error-page #error > table.scroll-table {
+  border: 1px solid #cecece;
+  display: block;
+}
+#post #post-body > table thead,
+#about > table thead,
+#error-page #error > table thead {
+  background-color: #e3e3e3;
+  font-weight: bold;
+  padding: 0.1rem 0;
+}
+#post #post-body > table th,
+#post #post-body > table td,
+#about > table th,
+#about > table td,
+#error-page #error > table th,
+#error-page #error > table td {
+  padding: 0 0.2rem;
+  border: 1px solid #cecece;
+  line-height: 1.5;
+  height: 0.4rem;
+}
+#post #post-body dt,
+#about dt,
+#error-page #error dt {
+  font-weight: bold;
+}
+#post #post-body dd,
+#about dd,
+#error-page #error dd {
+  padding-left: 0.3rem;
+}
+#post #post-body acronym,
+#post #post-body abbr,
+#about acronym,
+#about abbr,
+#error-page #error acronym,
+#error-page #error abbr {
+  color: #6699cc;
+}
+#post #post-body > iframe,
+#about > iframe,
+#error-page #error > iframe {
+  display: block;
+  margin: 0 auto;
 }
