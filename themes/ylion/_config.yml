@@ -119,7 +119,7 @@ whichCategory: 0
 ### post footer
 ### 저자 정보 부분 설정
 # high_song: '신나게!! &#128541;'  ### 노래를 틀어주는 문자. 이 기능이 필요하지 않다면 비우거나 제거하세요
-author_img: http://example.com/author.jpg # 저자 아바타 주소
+author_img: /img/avatar.jpg # 저자 아바타 주소
 author_profile_page: /about.html  # 저자의 이름을 클릭할 때 이동할 페이지
 
 donate:

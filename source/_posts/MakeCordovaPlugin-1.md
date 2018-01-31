@@ -8,15 +8,9 @@ img: /MakeCordovaPlugin-1/cordova_bot.png
 
 ---
 
-## Cordova Plugin 사전학습
+> **본 post에서는 Cordova Plugin 작성에 필요한 사전 준비 작업에 대해 설명합니다**
 
-Cordova 에서 Native 기능 활용을 위해 사용하고 있는 Plugin은 아래의 세종류로 구성되어있다.
-1. Cordova 프로젝트에서 native 기능을 수행하기 위해 필요한 `native code`
-2. Native와 Web을 연결해주는 중간단계 역할을 하는 `javascript code`
-3. Plugin 설정을 갖고 있는 `plugin.xml`
-
-Cordova Plugin을 만들기에 앞서서 위의 세가지가 어떠한 역할을 하는지는 간략하게라도 알고있어야 한다.
-
+---
 
 ## Cordova Plugin 개발시의 필요사항
 Cordova plugin 개발을 위해서는 Cordova에서 제공하는 Plugman 모듈이 필요하다.
@@ -119,8 +113,11 @@ Plugin Template까지 제대로 작성이 됐다면, 플러그인을 작성할 �
 ![0.nqusor00k2](0.nqusor00k2.png)
 정상적으로 파일이 등록되었으면 `OK`를 눌러 창을 닫는다.
 
-이후 `myPlugin/src/android/` 를 오른쪽 클릭해 `Mark Directory as -> Sources Root`를 해주면 IDE가 source Root로 인식하고 Java 코딩이 가능해진다
+이후 `myPlugin/src/android/` 를 오른쪽 클릭해 `Mark Directory as -> Sources Root`를 선택한다
 ![0.apr51y8s4yk](0.apr51y8s4yk.png)
+
+Sources Root로 잡히게 되면 IDE가 인식해, 파일의 아이콘이 바뀌며 Java 코딩이 가능해진다
+![0.hbfndzyucwg](0.hbfndzyucwg.png)
 
 ----
 
