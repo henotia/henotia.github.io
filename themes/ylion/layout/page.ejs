@@ -41,6 +41,19 @@
     </div>
 <%}%>
 
+<%if(page.type && page.type==='guestbook'){%>
+<div id="main">
+    <article id="post">
+        <div id="post-body">
+            <%- page.content %>
+        </div>
+    </article>
+    <div id="comments">
+        <%- partial('_partial/comments', {page: page}) %>
+    </div>
+</div>
+<%}%>
+
 <%if(page.type && page.type==='error'){%>
 <div id="main">
     <div id="error">
@@ -48,3 +61,4 @@
     </div>
 </div>
 <%}%>
+

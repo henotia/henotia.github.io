@@ -7,7 +7,10 @@ menu:
   icon: fa-home
 - page: about
   url: /about
-  icon: fa-user
+  icon: fa-id-card
+- page: guestbook
+  url: /guestbook
+  icon: fa-address-book
 - page: rss
   url: /atom.xml
   icon: fa-rss
@@ -30,8 +33,9 @@ widgets:
 ## widgets settings
 ### notification config -- 사이트 상단 공지에 대한 설정. HTML과 plain text 지원
 notification: |-
-            <p>블로그 공지<br>
-            ylion 한국어 지원：<a href="https://github.com/henotia" title="github" target="_blank">Henotia</a>
+            <p>블로그 공지(ylion 한국어 지원：<a href="https://github.com/henotia" title="github" target="_blank">Henotia</a>)<br>
+            블로그 버전: 0.0.2<br>
+            <a href="/guestbook">방명록 추가</a>
             </p>
 
 ### categories-list config -- 카테고리 설정{@cate_config:{@show_count:숫자 표시여부，@show_current: 현재 카테고리 하이라이트 여부}}
