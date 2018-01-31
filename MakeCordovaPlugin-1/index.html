@@ -124,7 +124,7 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
     
 <li class="widget widget-normal category">
     <h3 class="fa fa-th widget-title">카테고리</h3>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Ionic/"><i class="fa" aria-hidden="true">Ionic</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/계획/"><i class="fa" aria-hidden="true">계획</i></a><span class="category-list-count">1</span></li></ul>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Ionic/"><i class="fa" aria-hidden="true">Ionic</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/계획/"><i class="fa" aria-hidden="true">계획</i></a><span class="category-list-count">1</span></li></ul>
 </li>
 
 
@@ -132,7 +132,7 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
     
 <li class="widget widget-normal archive">
   <h3 class="fa fa-archive widget-title">Archives</h3>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">1월 2018</i></a><span class="archive-list-count">5</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">1월 2018</i></a><span class="archive-list-count">6</span></li></ul>
 </li>
 
 
@@ -142,7 +142,7 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
   <h3 class="fa fa-tags widget-title">태그</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/Ionic/" style="font-size: 0.17rem; color: #386da4">Ionic</a> <a href="/tags/Cordova/" style="font-size: 0.2rem; color: #0a407c">Cordova</a> <a href="/tags/신년계획/" style="font-size: 0.15rem; color: #69c">신년계획</a> <a href="/tags/Android/" style="font-size: 0.15rem; color: #69c">Android</a> <a href="/tags/Plugin/" style="font-size: 0.15rem; color: #69c">Plugin</a>
+      <a href="/tags/Ionic/" style="font-size: 0.18rem; color: #295e97">Ionic</a> <a href="/tags/Cordova/" style="font-size: 0.2rem; color: #0a407c">Cordova</a> <a href="/tags/Android/" style="font-size: 0.17rem; color: #477bb1">Android</a> <a href="/tags/Plugin/" style="font-size: 0.17rem; color: #477bb1">Plugin</a> <a href="/tags/신년계획/" style="font-size: 0.15rem; color: #69c">신년계획</a>
   </div>
 </li>
 
@@ -208,13 +208,10 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
         </div>
         
         <div id="post-body">
-            <h2 id="Cordova-Plugin-사전학습"><a href="#Cordova-Plugin-사전학습" class="headerlink" title="Cordova Plugin 사전학습"></a>Cordova Plugin 사전학습</h2><p>Cordova 에서 Native 기능 활용을 위해 사용하고 있는 Plugin은 아래의 세종류로 구성되어있다.</p>
-<ol>
-<li>Cordova 프로젝트에서 native 기능을 수행하기 위해 필요한 <code>native code</code></li>
-<li>Native와 Web을 연결해주는 중간단계 역할을 하는 <code>javascript code</code></li>
-<li>Plugin 설정을 갖고 있는 <code>plugin.xml</code></li>
-</ol>
-<p>Cordova Plugin을 만들기에 앞서서 위의 세가지가 어떠한 역할을 하는지는 간략하게라도 알고있어야 한다.</p>
+            <blockquote>
+<p><strong>본 post에서는 Cordova Plugin 작성에 필요한 사전 준비 작업에 대해 설명합니다</strong></p>
+</blockquote>
+<hr>
 <h2 id="Cordova-Plugin-개발시의-필요사항"><a href="#Cordova-Plugin-개발시의-필요사항" class="headerlink" title="Cordova Plugin 개발시의 필요사항"></a>Cordova Plugin 개발시의 필요사항</h2><p>Cordova plugin 개발을 위해서는 Cordova에서 제공하는 Plugman 모듈이 필요하다.<br><figure class="highlight bash"><figcaption><span>cordova plugman 설치</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g plugman <span class="comment"># 현재 plugman의 버전은 2.0.0이다.</span></span><br></pre></td></tr></table></figure></p>
 <p>Cordova plugin 테스트는 실제 Cordova Project 내에서 테스트를 해야 하므로, Cordova Project를 만들 수 있는 모듈도 필요로 한다.(<code>Ionic</code> or <code>Cordova</code>)</p>
 <p>본 포스트 내에서는 Android Platform에서 사용하는 Native Plugin을 작성한다.<br>따라서 Android Platform을 설치하기 위한 <code>Android SDK</code>가 필요하다.</p>
@@ -247,14 +244,15 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
 <p>이후 우측의 녹색 십자 버튼을 누르고, <code>1 JARs or directories...</code>를 누르고 <code>libs</code> 디렉토리에 넣은 <code>CordovaLib-6.4.0.jar</code>를 찾아 선택한다.</p>
 <p><img src="0.tmskfynrpm.png" alt="0.tmskfynrpm"></p>
 <p><img src="0.nqusor00k2.png" alt="0.nqusor00k2"><br>정상적으로 파일이 등록되었으면 <code>OK</code>를 눌러 창을 닫는다.</p>
-<p>이후 <code>myPlugin/src/android/</code> 를 오른쪽 클릭해 <code>Mark Directory as -&gt; Sources Root</code>를 해주면 IDE가 source Root로 인식하고 Java 코딩이 가능해진다<br><img src="0.apr51y8s4yk.png" alt="0.apr51y8s4yk"></p>
+<p>이후 <code>myPlugin/src/android/</code> 를 오른쪽 클릭해 <code>Mark Directory as -&gt; Sources Root</code>를 선택한다<br><img src="0.apr51y8s4yk.png" alt="0.apr51y8s4yk"></p>
+<p>Sources Root로 잡히게 되면 IDE가 인식해, 파일의 아이콘이 바뀌며 Java 코딩이 가능해진다<br><img src="0.hbfndzyucwg.png" alt="0.hbfndzyucwg"></p>
 <hr>
 <p>위의 과정을 끝으로 Android Studio에서 Cordova Plugin 개발에 대한 기본적인 환경설정이 모두 끝났다.<br>각 파일에 대한 디테일한 설명은 다음 포스트에서 계속 진행하도록 한다.</p>
 
         </div>
         <div id="post-footer">
             <div class="avatar" >
-                <img src="http://example.com/author.jpg" alt="avatar"/>
+                <img src="/img/avatar.jpg" alt="avatar"/>
                 
                 
             </div>
@@ -269,7 +267,7 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
                 
                 <li>발행 일자: <span>2018-01-25  11:32:05</span></li>
                 
-                <li>업데이트 일자: <span>2018-01-25  13:09:15</span></li>
+                <li>업데이트 일자: <span>2018-01-31  11:09:30</span></li>
                 
                 <li class="post-category">
                     카테고리:
@@ -299,6 +297,8 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
         </div>
     </article>
     <div class="article-nav">
+        
+        <a href="/MakeCordovaPlugin-2/" class="pre-post fa fa-caret-left">Cordova Plugin 만들기 #2</a>
         
         
         <a href="/IonicEmbedded-3/" class="next-post fa">Ionic Project를 Android Native 내에 Embedded 시키는 방법 #3</a>
@@ -385,7 +385,7 @@ ylion 한국어 지원：<a href="https://github.com/henotia" title="github" tar
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cordova-Plugin-사전학습"><span class="toc-number">1.</span> <span class="toc-text"><a href="#Cordova-Plugin-&#xC0AC;&#xC804;&#xD559;&#xC2B5;" class="headerlink" title="Cordova Plugin &#xC0AC;&#xC804;&#xD559;&#xC2B5;"></a>Cordova Plugin &#xC0AC;&#xC804;&#xD559;&#xC2B5;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cordova-Plugin-개발시의-필요사항"><span class="toc-number">2.</span> <span class="toc-text"><a href="#Cordova-Plugin-&#xAC1C;&#xBC1C;&#xC2DC;&#xC758;-&#xD544;&#xC694;&#xC0AC;&#xD56D;" class="headerlink" title="Cordova Plugin &#xAC1C;&#xBC1C;&#xC2DC;&#xC758; &#xD544;&#xC694;&#xC0AC;&#xD56D;"></a>Cordova Plugin &#xAC1C;&#xBC1C;&#xC2DC;&#xC758; &#xD544;&#xC694;&#xC0AC;&#xD56D;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cordova-Plugin-개발환경-세팅"><span class="toc-number">3.</span> <span class="toc-text"><a href="#Cordova-Plugin-&#xAC1C;&#xBC1C;&#xD658;&#xACBD;-&#xC138;&#xD305;" class="headerlink" title="Cordova Plugin &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC138;&#xD305;"></a>Cordova Plugin &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC138;&#xD305;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova-Project-생성"><span class="toc-number">3.1.</span> <span class="toc-text"><a href="#Cordova-Project-&#xC0DD;&#xC131;" class="headerlink" title="Cordova Project &#xC0DD;&#xC131;"></a>Cordova Project &#xC0DD;&#xC131;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plugman을-사용한-Cordova-Plugin-template-생성"><span class="toc-number">3.2.</span> <span class="toc-text"><a href="#Plugman&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-Cordova-Plugin-template-&#xC0DD;&#xC131;" class="headerlink" title="Plugman&#xC744; &#xC0AC;&#xC6A9;&#xD55C; Cordova Plugin template &#xC0DD;&#xC131;"></a>Plugman&#xC744; &#xC0AC;&#xC6A9;&#xD55C; Cordova Plugin template &#xC0DD;&#xC131;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio에서의-개발환경-설정"><span class="toc-number">3.3.</span> <span class="toc-text"><a href="#Android-Studio&#xC5D0;&#xC11C;&#xC758;-&#xAC1C;&#xBC1C;&#xD658;&#xACBD;-&#xC124;&#xC815;" class="headerlink" title="Android Studio&#xC5D0;&#xC11C;&#xC758; &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC124;&#xC815;"></a>Android Studio&#xC5D0;&#xC11C;&#xC758; &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC124;&#xC815;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Cordova-프로젝트-열기"><span class="toc-number">3.3.1.</span> <span class="toc-text"><a href="#Cordova-&#xD504;&#xB85C;&#xC81D;&#xD2B8;-&#xC5F4;&#xAE30;" class="headerlink" title="Cordova &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC5F4;&#xAE30;"></a>Cordova &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC5F4;&#xAE30;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-SDK-Android-SDK-적용"><span class="toc-number">3.3.2.</span> <span class="toc-text"><a href="#Java-SDK-Android-SDK-&#xC801;&#xC6A9;" class="headerlink" title="Java SDK, Android SDK &#xC801;&#xC6A9;"></a>Java SDK, Android SDK &#xC801;&#xC6A9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CordovaLib-적용"><span class="toc-number">3.3.3.</span> <span class="toc-text"><a href="#CordovaLib-&#xC801;&#xC6A9;" class="headerlink" title="CordovaLib &#xC801;&#xC6A9;"></a>CordovaLib &#xC801;&#xC6A9;</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cordova-Plugin-개발시의-필요사항"><span class="toc-number">1.</span> <span class="toc-text"><a href="#Cordova-Plugin-&#xAC1C;&#xBC1C;&#xC2DC;&#xC758;-&#xD544;&#xC694;&#xC0AC;&#xD56D;" class="headerlink" title="Cordova Plugin &#xAC1C;&#xBC1C;&#xC2DC;&#xC758; &#xD544;&#xC694;&#xC0AC;&#xD56D;"></a>Cordova Plugin &#xAC1C;&#xBC1C;&#xC2DC;&#xC758; &#xD544;&#xC694;&#xC0AC;&#xD56D;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cordova-Plugin-개발환경-세팅"><span class="toc-number">2.</span> <span class="toc-text"><a href="#Cordova-Plugin-&#xAC1C;&#xBC1C;&#xD658;&#xACBD;-&#xC138;&#xD305;" class="headerlink" title="Cordova Plugin &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC138;&#xD305;"></a>Cordova Plugin &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC138;&#xD305;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cordova-Project-생성"><span class="toc-number">2.1.</span> <span class="toc-text"><a href="#Cordova-Project-&#xC0DD;&#xC131;" class="headerlink" title="Cordova Project &#xC0DD;&#xC131;"></a>Cordova Project &#xC0DD;&#xC131;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plugman을-사용한-Cordova-Plugin-template-생성"><span class="toc-number">2.2.</span> <span class="toc-text"><a href="#Plugman&#xC744;-&#xC0AC;&#xC6A9;&#xD55C;-Cordova-Plugin-template-&#xC0DD;&#xC131;" class="headerlink" title="Plugman&#xC744; &#xC0AC;&#xC6A9;&#xD55C; Cordova Plugin template &#xC0DD;&#xC131;"></a>Plugman&#xC744; &#xC0AC;&#xC6A9;&#xD55C; Cordova Plugin template &#xC0DD;&#xC131;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio에서의-개발환경-설정"><span class="toc-number">2.3.</span> <span class="toc-text"><a href="#Android-Studio&#xC5D0;&#xC11C;&#xC758;-&#xAC1C;&#xBC1C;&#xD658;&#xACBD;-&#xC124;&#xC815;" class="headerlink" title="Android Studio&#xC5D0;&#xC11C;&#xC758; &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC124;&#xC815;"></a>Android Studio&#xC5D0;&#xC11C;&#xC758; &#xAC1C;&#xBC1C;&#xD658;&#xACBD; &#xC124;&#xC815;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Cordova-프로젝트-열기"><span class="toc-number">2.3.1.</span> <span class="toc-text"><a href="#Cordova-&#xD504;&#xB85C;&#xC81D;&#xD2B8;-&#xC5F4;&#xAE30;" class="headerlink" title="Cordova &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC5F4;&#xAE30;"></a>Cordova &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC5F4;&#xAE30;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-SDK-Android-SDK-적용"><span class="toc-number">2.3.2.</span> <span class="toc-text"><a href="#Java-SDK-Android-SDK-&#xC801;&#xC6A9;" class="headerlink" title="Java SDK, Android SDK &#xC801;&#xC6A9;"></a>Java SDK, Android SDK &#xC801;&#xC6A9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CordovaLib-적용"><span class="toc-number">2.3.3.</span> <span class="toc-text"><a href="#CordovaLib-&#xC801;&#xC6A9;" class="headerlink" title="CordovaLib &#xC801;&#xC6A9;"></a>CordovaLib &#xC801;&#xC6A9;</span></a></li></ol></li></ol></li></ol>
 
 
 

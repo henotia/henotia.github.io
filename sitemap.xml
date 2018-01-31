@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://henotia.github.io/about/index.html</loc>
+    
+    <lastmod>2018-01-31T04:23:59.590Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://henotia.github.io/MakeCordovaPlugin-2/</loc>
+    
+    <lastmod>2018-01-31T04:12:18.460Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://henotia.github.io/MakeCordovaPlugin-1/</loc>
     
-    <lastmod>2018-01-25T04:09:15.138Z</lastmod>
+    <lastmod>2018-01-31T02:09:30.452Z</lastmod>
     
   </url>
   
@@ -33,13 +47,6 @@
     <loc>http://henotia.github.io/%EC%8B%A0%EB%85%84%EA%B3%84%ED%9A%8D/</loc>
     
     <lastmod>2018-01-02T06:47:17.403Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://henotia.github.io/about/index.html</loc>
-    
-    <lastmod>2018-01-02T06:41:55.337Z</lastmod>
     
   </url>
   

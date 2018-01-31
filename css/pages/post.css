@@ -317,7 +317,8 @@
   vertical-align: text-bottom;
   text-align: center;
   line-height: 1.4;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
+  margin-left: 0.15rem;
 }
 #post #post-footer .avatar img {
   -webkit-border-radius: 10px;
@@ -327,8 +328,7 @@
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 2px solid #cecece;
-  height: 100px;
-  width: 100px;
+  width: 130px;
 }
 #post #post-footer .avatar .high-song,
 #post #post-footer .avatar .donate {
