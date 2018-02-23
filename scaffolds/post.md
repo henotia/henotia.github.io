@@ -1,7 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-author: 
+author: 헤노티아
 categories: []
 tags: []
+img: 
 ---
