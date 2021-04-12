@@ -1,593 +1,78 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!--Setting-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="apple-mobile-web-app-capable"  content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no,email=no">
-    
-    
-    <!--Simple SEO-->
-
-<meta name="description" content=My Shelter/>
-
-
-<meta name="robots" content=all />
-<meta name="google" content=all />
-<meta name="googlebot" content=all />
-<meta name="verify" content=all />
-    <!--Title-->
-
-<title>개발 블로그</title>
-
-<link rel="alternate" href="/atom.xml" title="개발 블로그" type="application/atom+xml">
-
-
-<link rel="icon" href="/favicon.ico">
-
-    
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/article-exp.css">
-<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
-
-    <!--script-->
-
-
-
-<!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
-
-
-    
-    
-<!-- old source
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', '', 'auto');
-    ga('send', 'pageview');
-
-</script>
--->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111716055-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-111716055-1');
-</script>
-
-
-</head>
-
-<body id="normal">
-<!--[if lte IE 8]>
-<style>
-    html{ font-size: 1em }
-</style>
-<![endif]-->
-<!--[if lte IE 9]>
-<style>
-    header{ top: 71px; position: absolute!important;}
-    #container{padding-top: 151px!important;}
-</style>
-<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">귀하의 브라우저 버전이 너무 낮습니다. 더 나은 사용환경을 경험하시려면 브라우저 버전을 업데이트 하시거나 IE Edge, Chrome, Firefox, Safari 등과 같은 최신 브라우저를 사용하십시오</div>
-<![endif]-->
-
-<div id="wrap">
-    <header >
-    <div id="site-meta">
-        <a href="/" id="logo">
-            <h1 class="title">개발 블로그</h1>
-        </a>
-        
-        <h2 class="subtitle">Blah Blah</h2>
-        
-    </div>
-    <ul id="nav">
-        
-            <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
-        
-            <li><a href="/about"><i class="fa fa-id-card"></i>About</a></li>
-        
-            <li><a href="/guestbook"><i class="fa fa-address-book"></i>guestbook</a></li>
-        
-            <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS</a></li>
-        
-        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>검색</a></li>
-    </ul>
-</header>
-
-    <div id="container">
-        
-<ul id="sidebar">
-    
-    
-<li class="widget notification">
-    <i class="fa fa-bell-o"></i>
-    <div>
-        <p>블로그 공지(ylion 한국어 지원：<a href="https://github.com/henotia" title="github" target="_blank">Henotia</a>)<br>
-블로그 버전: 0.0.2<br>
-<a href="/guestbook">방명록 추가</a>
-</p>
-    </div>
-</li>
-
-    
-    
-<li class="widget widget-normal category">
-    <h3 class="fa fa-th widget-title">카테고리</h3>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Ionic/"><i class="fa" aria-hidden="true">Ionic</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/계획/"><i class="fa" aria-hidden="true">계획</i></a><span class="category-list-count">1</span></li></ul>
-</li>
-
-
-    
-    
-<li class="widget widget-normal archive">
-  <h3 class="fa fa-archive widget-title">Archives</h3>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/"><i class="fa" aria-hidden="true">1월 2018</i></a><span class="archive-list-count">6</span></li></ul>
-</li>
-
-
-    
-    
-<li class="widget widget-normal tags">
-  <h3 class="fa fa-tags widget-title">태그</h3>
-  <div class="tagcloud-content">
-    
-      <a href="/tags/Ionic/" style="font-size: 0.18rem; color: #295e97">Ionic</a> <a href="/tags/Cordova/" style="font-size: 0.2rem; color: #0a407c">Cordova</a> <a href="/tags/Android/" style="font-size: 0.17rem; color: #477bb1">Android</a> <a href="/tags/Plugin/" style="font-size: 0.17rem; color: #477bb1">Plugin</a> <a href="/tags/신년계획/" style="font-size: 0.15rem; color: #69c">신년계획</a>
-  </div>
-</li>
-
-
-    
-    
-<li class="widget widget-normal friends-link">
-    <h3 class="fa fa-globe widget-title">링크</h3><br/>
-
-    
-        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">테마 제작자</a>
-
-    
-        <a href="http://henotia.github.io" class="fa" target="_blank">한국어 번역</a>
-
-    
-
-</li>
-
-    
-</ul>
-
-
-        <ul id="main">
-    
-
-    
-    
-    
-    
-    
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/MakeCordovaPlugin-2/">
-        <div class="article-img img-ajax" data-src= /MakeCordovaPlugin-1/cordova_bot.png>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/MakeCordovaPlugin-2/">
-                <h2 class="article-title">Cordova Plugin 만들기 #2</h2>
-            </a>
-            
-            <p class="article-content">
-                
-본 post에서는 Cordova Plugin 작성에 대해 설명합니다본 post의 내용은 Cordova Plugin 만들기 #1에서 이어집니다
-
-
-Plugin StructureCordova Plugin을 이루고 있는 골자는 크게 다음과 같다.
-
-사용하고자 하는 Native 기능이 담긴 Native Interface
-cordova.exec를 통해 Native platform과 통신하는 Javascript Interface
-플러그인의 명세가 담긴 config파일
-
-
-이후 위의 내용을 바탕으로 사용자에게 텍스트를 입력받아 그대로 출력하는 Echo 플러그인을 작성해본다.
-Native InterfaceCordova Project에서 사용하는 Native 기능을 작성한다.
-본 파일은 CordovaPlugin을 e...
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>Ionic</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Cordova
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/01/31</span>
-    </span>
-    
-    
-    
-    <a href="/MakeCordovaPlugin-2/" class="read-article">읽기</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/MakeCordovaPlugin-1/">
-        <div class="article-img img-ajax" data-src= /MakeCordovaPlugin-1/cordova_bot.png>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/MakeCordovaPlugin-1/">
-                <h2 class="article-title">Cordova Plugin 만들기 #1</h2>
-            </a>
-            
-            <p class="article-content">
-                
-본 post에서는 Cordova Plugin 작성에 필요한 사전 준비 작업에 대해 설명합니다
-
-
-Cordova Plugin 개발시의 필요사항Cordova plugin 개발을 위해서는 Cordova에서 제공하는 Plugman 모듈이 필요하다.cordova plugman 설치1$ npm install -g plugman # 현재 plugman의 버전은 2.0.0이다.
-Cordova plugin 테스트는 실제 Cordova Project 내에서 테스트를 해야 하므로, Cordova Project를 만들 수 있는 모듈도 필요로 한다.(Ionic or Cordova)
-본 포스트 내에서는 Android Platform에서 사용하는 Native Plugin을 작성한다.따라서 Android Platform을 설치하...
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>Ionic</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Cordova
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/01/25</span>
-    </span>
-    
-    
-    
-    <a href="/MakeCordovaPlugin-1/" class="read-article">읽기</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/IonicEmbedded-3/">
-        <div class="article-img img-ajax" data-src= /IonicEmbedded-1/9ql8nuci6586ko6r.png>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/IonicEmbedded-3/">
-                <h2 class="article-title">Ionic Project를 Android Native 내에 Embedded 시키는 방법 #3</h2>
-            </a>
-            
-            <p class="article-content">
-                
-본 post에서는 Ionic 프로젝트를 Android Fragment를 통해 실행하는 방법에 대해 설명합니다본 post의 내용은 Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1과 Ionic Project를 Android Native 내에 Embedded 시키는 방법 #2에서 이어집니다
-
-
-Android Native 코드 작성전 post에서는 Activity를 통해 Ionic Project를 실행하는 방법에 대해 설명했다.이번 post에서는 Fragment를 통해 Ionic Project를 실행하는 방법에 대해 설명한다.
-IonicFragment 생성Ionic을 불러오는 Fragment로 IonicFragment를 새로 만들어준다.
-IonicFragment....
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>Ionic</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Ionic
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/01/12</span>
-    </span>
-    
-    
-    
-    <a href="/IonicEmbedded-3/" class="read-article">읽기</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/IonicEmbedded-2/">
-        <div class="article-img img-ajax" data-src= /IonicEmbedded-1/9ql8nuci6586ko6r.png>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/IonicEmbedded-2/">
-                <h2 class="article-title">Ionic Project를 Android Native 내에 Embedded 시키는 방법 #2</h2>
-            </a>
-            
-            <p class="article-content">
-                
-본 post에서는 Ionic 프로젝트를 Android Activity를 통해 실행하는 방법에 대해 설명합니다본 post의 내용은 Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1에서 이어집니다
-
-
-Android Native 코드 작성전 post에서는 Android Project에서 Ionic Project를 실행하기위해 필요한 설정을 준비하는 작업을 했다.이번 post에서는 기존의 설정을 바탕으로, Android Activity에서 Ionic Project를 불러오는 방법에 대해 설명한다
-IonicActivity 생성Ionic을 불러오는 Activity로 IonicActivity를 새로 만들어준다.본 Activity는 CordovaActivity를 상속받아,...
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>Ionic</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Ionic
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/01/11</span>
-    </span>
-    
-    
-    
-    <a href="/IonicEmbedded-2/" class="read-article">읽기</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/IonicEmbedded-1/">
-        <div class="article-img img-ajax" data-src= /IonicEmbedded-1/9ql8nuci6586ko6r.png>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/IonicEmbedded-1/">
-                <h2 class="article-title">Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1</h2>
-            </a>
-            
-            <p class="article-content">
-                참고
-
-http://www.catharinegeek.com/embed-cordova-webview-in-android-native-app/
-https://github.com/Adobe-Marketing-Cloud-Apps/app-sample-android-phonegap/wiki/Embed-Webview-in-Android-Fragment
-https://github.com/rajivnarayana/CordovaFragments
-https://github.com/shucc/CordovaFragment
-
-
-함께보기 Ionic Project를 Android Native 내에 Embedded 시키는 방법 #1 Ionic Project를 Android Native 내에 Embedded 시키는 방법 #2 Ioni...
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>Ionic</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Ionic
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/01/11</span>
-    </span>
-    
-    
-    
-    <a href="/IonicEmbedded-1/" class="read-article">읽기</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/신년계획/">
-        <div class="article-img img-ajax" data-src= /img/default.jpg>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/신년계획/">
-                <h2 class="article-title">신년계획</h2>
-            </a>
-            
-            <p class="article-content">
-                18년도 계획필수
-불분명한 목적의 다이어트
-1년에 책 12권 읽기
-한달에 최소 한번씩 블로그 포스팅 하기
-TIL 하기
-
-선택
-개인 프로젝트
-
-
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>계획</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            신년계획
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/01/02</span>
-    </span>
-    
-    
-    
-    <a href="/신년계획/" class="read-article">읽기</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-
-</ul>
-
-    </div>
-    <footer id="footer">
-    
-    <div class="social">
-        
-        <a href="https://github.com/henotia" class="fa fa-github" target="_blank" title="Follow me~"></a>
-        
-    </div>
-    
-    <div>
-        
-        <a href="/" class="copyright-links">Henotia</a>&copy;2018 - 2018.All Rights
-        Reserved.
-    </div>
-    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
-                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
-    </p>
-    
-</footer>
-
-</div>
-    <ul id="tools">
-    <li class="totop-btn fa fa-angle-up"></li>
-    <li class="exchange-btn fa fa-exchange"></li>
-  
-    
-
-    
-</ul>
-<p id="process"></p>
-<div id="search-overlay">
-    <div class="search-area-wrap">
-        <div id="search-area">
-            <div class="input-wrap focus">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <input id="search-input" autofocus autocomplete="off" type="text"
-                       placeholder="search this website..."/>
-            </div>
-            <ul id="search-result">
-                <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
-
-<script src="/js/search.js"></script>
-<script type="text/javascript">
-    //theme config datas
-    var copyrightObj = {};
-    copyrightObj.enable = 'true';
-    copyrightObj.triggerCopyLength = '200';
-    copyrightObj.appendText = '상업적인 사용은 저자에게 연락하여 권한을 얻어주시기 바랍니다. 비상업적 사용은 출처를 명확히 밝혀주시기 바랍니다 ©';
-    var leancloudObj = {};
-    leancloudObj.enable = 'false';
-    leancloudObj.className = 'BlogCounter';
-    leancloudObj.limits = '10';
-</script>
-<script type="text/javascript">
-    var search = {};
-    var search_path = "search.xml";
-    if (!search_path) {
-        search_path = "search.xml";
+  <meta charset="UTF-8">
+  <title>scrollbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      box-sizing: border-box;
     }
-    search.path = "/" + search_path;
-    search.func =  _ajax.init();
-</script>
-<script src="/js/app.js"></script>
 
+    body {
+      padding: 10px;
+    }
 
+    header {
+      width: 100%;
+      height: 60px;
+      border: 1px solid black;
+      margin-bottom: 12px;
+    }
+
+    section {
+      display: flex;
+      height: 1024px;
+    }
+
+    .area {
+      width: 100%;
+      border: 1px solid black;
+      margin-left: 10px;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .area:first-child {
+      margin-left: 0;
+    }
+
+    li {
+      padding: 10px;
+      border: 1px solid #cccccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>헤더</header>
+  <section>
+    <div class='area area1'>
+      <ul></ul>
+    </div>
+    <div class='area area2'>
+      <ul></ul>
+    </div>
+    <div class='area area3'>
+      <ul></ul>
+    </div>
+  </section>
+
+  <script>
+    const str = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,\n' +
+      '          but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
+
+    const area = document.querySelectorAll('.area > ul');
+
+    area.forEach(ul => {
+      for (let i = 0; i < 20; i++) {
+        const li = document.createElement('li');
+        li.innerText = str;
+        ul.appendChild(li);
+      }
+    })
+  </script>
 </body>
 </html>
