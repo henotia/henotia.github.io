@@ -1,78 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>scrollbar</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      overflow: auto;
-      box-sizing: border-box;
-    }
-
-    body {
-      padding: 10px;
-    }
-
-    header {
-      width: 100%;
-      height: 60px;
-      border: 1px solid black;
-      margin-bottom: 12px;
-    }
-
-    section {
-      display: flex;
-      height: 1024px;
-    }
-
-    .area {
-      width: 100%;
-      border: 1px solid black;
-      margin-left: 10px;
-      height: 100%;
-      overflow: auto;
-    }
-
-    .area:first-child {
-      margin-left: 0;
-    }
-
-    li {
-      padding: 10px;
-      border: 1px solid #cccccc;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"></head>
 <body>
-  <header>헤더</header>
-  <section>
-    <div class='area area1'>
-      <ul></ul>
-    </div>
-    <div class='area area2'>
-      <ul></ul>
-    </div>
-    <div class='area area3'>
-      <ul></ul>
-    </div>
-  </section>
-
-  <script>
-    const str = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,\n' +
-      '          but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';
-
-    const area = document.querySelectorAll('.area > ul');
-
-    area.forEach(ul => {
-      for (let i = 0; i < 20; i++) {
-        const li = document.createElement('li');
-        li.innerText = str;
-        ul.appendChild(li);
-      }
-    })
-  </script>
-</body>
+  <app-root></app-root>
+<script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
 </html>
